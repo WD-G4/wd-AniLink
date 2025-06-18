@@ -15,6 +15,10 @@
       padding-top: 100px;
       background-color: #F9FFD2;
     }
+
+    .admin {
+      background-color: #567119;
+    }
   </style>
 </head>
 
