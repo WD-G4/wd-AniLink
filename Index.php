@@ -18,12 +18,20 @@
   </style>
 </head>
 
+<?php
+$isAdmin = true;
+?>
+
 <body>
 
   <nav class="navbar navbar-expand-md fixed-top" style="background-color: #CBB550;">
     <div class="container-fluid mt-2 px-5 py-3 d-flex align-items-center justify-content-between">
       <div class="AniBayan-text fw-bold fs-3" style="color: #567119; font-family: 'Montserrat', sans-serif;">
         AniBayan
+        <?php
+            if($isAdmin) {?>
+        <button type="button" class=" admin btn btn-secondary" style="border-radius: 50%;">admin</button>
+        <?php } ?>
       </div>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu"
         aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation">
@@ -55,6 +63,24 @@
               Products
             </a>
           </li>
+           <?php
+            if($isAdmin) {?>
+          <li class="nav-item">
+            <a href="#" class="nav-link fw-bold text-uppercase mt-2 mx-2 px-md-3 px-2 py-md-2 py-1"
+              style="color: #567119;">
+              Users
+            </a>
+          </li>
+           <?php } ?>
+           <?php
+            if($isAdmin) {?>
+          <li class="nav-item">
+            <a href="#" class="nav-link fw-bold text-uppercase mt-2 mx-2 px-md-3 px-2 py-md-2 py-1"
+              style="color: #567119;">
+              Farmers
+            </a>
+          </li>
+          <?php } ?>
         </ul>
       </div>
     </div>
