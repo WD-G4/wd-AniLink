@@ -1,110 +1,81 @@
 <!doctype html>
 <html lang="en">
-
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>AniBayan</title>
-
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
-
+  <?php session_start(); ?>
   <style>
     body {
-      padding-top: 100px;
+      font-family: 'Montserrat', sans-serif;
       background-color: #F9FFD2;
     }
-
-    .admin {
-      background-color: #567119;
+    .btn-user {
+      background-color: #ABC76D;
+    }
+    .btn-admin {
+      background-color: #BBCB56;
+    }
+    .card {
+      height: 748px;
+      width: 685px;
+    }
+    .title {
+      color: #758E3C;
+    }
+    .sub-title {
+      color: #5A751D;
+    }
+    .btn-submit {
+      background-color: #5A751D;
     }
   </style>
 </head>
-
-<?php
-$isAdmin = true;
-?>
-
-<body>
-
-  <nav class="navbar navbar-expand-md fixed-top" style="background-color: #CBB550;">
-    <div class="container-fluid mt-2 px-5 py-3 d-flex align-items-center justify-content-between">
-      <div class="AniBayan-text fw-bold fs-3" style="color: #567119; font-family: 'Montserrat', sans-serif;">
-        AniBayan
-        <?php
-            if($isAdmin) {?>
-        <button type="button" class=" admin btn btn-secondary" style="border-radius: 50%;">admin</button>
-        <?php } ?>
-      </div>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu"
-        aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse justify-content-end" id="navMenu">
-        <ul class="navbar-nav d-flex align-items-md-center" style="font-family: 'Montserrat', sans-serif;">
-          <li class="nav-item">
-            <a href="#" class="nav-link active fw-bold text-uppercase mt-2 mx-2 px-md-3 px-2 py-md-2 py-1"
-              style="color: #567119; background-color: #C9D76E; border-radius: 10px;">
-              Home
-            </a>
-          </li>
-          <li class="nav-item">
-            <a href="#" class="nav-link fw-bold text-uppercase mt-2 mx-2 px-md-3 px-2 py-md-2 py-1"
-              style="color: #567119;">
-              Company
-            </a>
-          </li>
-          <li class="nav-item">
-            <a href="#" class="nav-link fw-bold text-uppercase mt-2 mx-2 px-md-3 px-2 py-md-2 py-1"
-              style="color: #567119;">
-              Services
-            </a>
-          </li>
-          <li class="nav-item">
-            <a href="#" class="nav-link fw-bold text-uppercase mt-2 mx-2 px-md-3 px-2 py-md-2 py-1"
-              style="color: #567119;">
-              Products
-            </a>
-          </li>
-           <?php
-            if($isAdmin) {?>
-          <li class="nav-item">
-            <a href="#" class="nav-link fw-bold text-uppercase mt-2 mx-2 px-md-3 px-2 py-md-2 py-1"
-              style="color: #567119;">
-              Users
-            </a>
-          </li>
-           <?php } ?>
-           <?php
-            if($isAdmin) {?>
-          <li class="nav-item">
-            <a href="#" class="nav-link fw-bold text-uppercase mt-2 mx-2 px-md-3 px-2 py-md-2 py-1"
-              style="color: #567119;">
-              Farmers
-            </a>
-          </li>
-          <?php } ?>
-        </ul>
-      </div>
+<body class="d-flex justify-content-center align-items-center vh-100">
+  <div class="card shadow rounded-4 p-5 text-center d-flex justify-content-center align-items-center" style="background-color: #F6D965; max-width: 748px; width: 685px;">
+    <h2 class="title fw-bold mb-2">Welcome to AniBayan</h2>
+    <p class="sub-title mb-4">Choose your portal</p>
+    <div class="d-flex justify-content-center gap-3">
+      <a href="user/index.php" class="btn-user btn btn-success px-5 align-items-center">User</a>
+      <button class="btn-admin btn btn-success px-4" data-bs-toggle="modal" data-bs-target="#adminLoginModal">Admin Login</button>
     </div>
-  </nav>
-
-  <div class="container py-5">
-    <div class="d-flex justify-content-center mb-4">
-      <div class="Title h1 fw-bold text-uppercase" style="color: #567119; font-family:'Montserrat', sans-serif;">FRESHLY HARVESTED</div>
-    </div>
-    <div class="row align-items-center">
-      <div class="col-md-6">
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Explicabo odio itaque tempore amet mollitia vitae eligendi ducimus aliquam animi illo saepe, alias eius accusamus dolorum consectetur possimus nisi iste at!</p>
-      </div>
-      <div class="col-md-6 text-end">
-        <img src="img/pic.png" alt="pek" class="img-fluid">
+  </div>
+  <div class="modal fade" id="adminLoginModal" tabindex="-1" aria-labelledby="adminLoginModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content rounded-4">
+        <div class="modal-header">
+          <h5 class="modal-title" id="adminLoginModalLabel">Admin Login</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="container">
+            <form method="post" action="admin/index.php">
+              <div class="row mb-3">
+                <div class="col-12">
+                  <label for="Username" class="form-label">Username</label>
+                  <input type="Username" class="form-control"  name="Username" required>
+                </div>
+              </div>
+              <div class="row mb-3">
+                <div class="col-12">
+                  <label for="adminPassword" class="form-label">Password</label>
+                  <input type="password" class="form-control" name="password" required>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-12">
+                  <button type="submit" class="btn-submit btn btn-success w-100" >Login</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
       </div>
     </div>
   </div>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
 </body>
-
 </html>
