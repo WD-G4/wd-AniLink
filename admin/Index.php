@@ -99,7 +99,7 @@ $isAdmin = true;
         <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Explicabo odio itaque tempore amet mollitia vitae eligendi ducimus aliquam animi illo saepe, alias eius accusamus dolorum consectetur possimus nisi iste at!</p>
       </div>
       <div class="col-md-6 text-end">
-        <img src="img/pic.png" alt="pek" class="img-fluid">
+        <img src="../img/pic.png" alt="pek" class="img-fluid">
       </div>
     </div>
   </div>
