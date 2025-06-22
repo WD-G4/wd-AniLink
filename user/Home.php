@@ -50,7 +50,7 @@ $isAdmin = false;
             </a>
           </li>
           <li class="nav-item">
-            <a href="user/about.php" class="nav-link fw-bold text-uppercase mt-2 mx-2 px-md-3 px-2 py-md-2 py-1"
+            <a href="About.php" class="nav-link fw-bold text-uppercase mt-2 mx-2 px-md-3 px-2 py-md-2 py-1"
               style="color: #567119;">
               About
             </a>
