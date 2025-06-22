@@ -38,7 +38,7 @@
     <h2 class="title fw-bold mb-2">Welcome to AniBayan</h2>
     <p class="sub-title mb-4">Choose your portal</p>
     <div class="d-flex justify-content-center gap-3">
-      <a href="user/index.php" class="btn-user btn btn-success px-5 align-items-center">User</a>
+      <a href="user/Home.php" class="btn-user btn btn-success px-5 align-items-center">User</a>
       <button class="btn-admin btn btn-success px-4" data-bs-toggle="modal" data-bs-target="#adminLoginModal">Admin Login</button>
     </div>
   </div>
@@ -51,7 +51,7 @@
         </div>
         <div class="modal-body">
           <div class="container">
-            <form method="post" action="admin/index.php">
+            <form method="post" action="admin/HomeAdmin.php">
               <div class="row mb-3">
                 <div class="col-12">
                   <label for="Username" class="form-label">Username</label>
