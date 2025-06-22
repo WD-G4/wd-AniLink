@@ -18,7 +18,7 @@
       margin: 0;
     }
     .btn-user {
-      background-color: #ABC76D;
+      background-color: #BBCB56;
     }
     .btn-admin {
       background-color: #BBCB56;
