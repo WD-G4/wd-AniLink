@@ -28,10 +28,10 @@
       width: 685px;
     }
     .title {
-      color:rgb(97, 125, 31);
+      color:rgb(56, 80, 2);
     }
     .sub-title {
-      color:rgb(97, 125, 31);
+      color:rgb(63, 90, 0);
     }
     .btn-submit {
       background-color: #5A751D;
