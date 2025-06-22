@@ -46,45 +46,21 @@ $isAdmin = true;
           <li class="nav-item">
             <a href="#" class="nav-link active fw-bold text-uppercase mt-2 mx-2 px-md-3 px-2 py-md-2 py-1"
               style="color: #567119; background-color: #C9D76E; border-radius: 10px;">
-              Home
+              Dashboard
             </a>
           </li>
           <li class="nav-item">
             <a href="#" class="nav-link fw-bold text-uppercase mt-2 mx-2 px-md-3 px-2 py-md-2 py-1"
               style="color: #567119;">
-              Company
+              Farmer List
             </a>
           </li>
           <li class="nav-item">
             <a href="#" class="nav-link fw-bold text-uppercase mt-2 mx-2 px-md-3 px-2 py-md-2 py-1"
               style="color: #567119;">
-              Services
+              Product List
             </a>
           </li>
-          <li class="nav-item">
-            <a href="#" class="nav-link fw-bold text-uppercase mt-2 mx-2 px-md-3 px-2 py-md-2 py-1"
-              style="color: #567119;">
-              Products
-            </a>
-          </li>
-           <?php
-            if($isAdmin) {?>
-          <li class="nav-item">
-            <a href="#" class="nav-link fw-bold text-uppercase mt-2 mx-2 px-md-3 px-2 py-md-2 py-1"
-              style="color: #567119;">
-              Users
-            </a>
-          </li>
-           <?php } ?>
-           <?php
-            if($isAdmin) {?>
-          <li class="nav-item">
-            <a href="#" class="nav-link fw-bold text-uppercase mt-2 mx-2 px-md-3 px-2 py-md-2 py-1"
-              style="color: #567119;">
-              Farmers
-            </a>
-          </li>
-          <?php } ?>
         </ul>
       </div>
     </div>

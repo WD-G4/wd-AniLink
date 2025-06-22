@@ -33,7 +33,7 @@
     }
   </style>
 </head>
-<body class="d-flex justify-content-center align-items-center vh-100">
+<body class="d-flex justify-content-center align-items-center shadow vh-100">
   <div class="card shadow rounded-4 p-5 text-center d-flex justify-content-center align-items-center" style="background-color: #F6D965; max-width: 748px; width: 685px;">
     <h2 class="title fw-bold mb-2">Welcome to AniBayan</h2>
     <p class="sub-title mb-4">Choose your portal</p>
