@@ -1,16 +1,25 @@
+<?php
+    $pageTitle = "AniBayan - About Us";
+    $platformDescription = "AniLinks is a platform that connects farmers to real-time data, students to hands-on learning and communities to actionable insights.";
+    
+    $imagePath = "images/terrace-rice.png"; 
+    $imageAltText = "A vibrant rice field in the Philippines at dawn.";
+
+    $imageExists = file_exists($imagePath);
+?>
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AniBayan - About Us</title>
+    <title><?php echo htmlspecialchars($pageTitle); ?></title>
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
 
     <style>
@@ -41,6 +50,14 @@
             color: var(--text-secondary);
         }
 
+        .image-placeholder {
+            background-color: #f8f9fa;
+            border: 1px dashed #ced4da;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 250px;
+        }
     </style>
 </head>
 
@@ -53,21 +70,30 @@
                     <div class="mb-5">
                         <h1 id="intro-heading" class="section-heading display-4">AniBayan?</h1>
                         <p class="section-text lead">
-                            AniLinks is platform that connects farmers to real-time data, students to hands-on learning and communities to actionable insights.
+                            <?php echo htmlspecialchars($platformDescription); ?>
                         </p>
                     </div>
                     <div>
                         <h2 class="section-heading display-4">Why Support Local Farmers</h2>
                         <p class="section-text lead">
-                            AniLinks is platform that connects farmers to real-time data, students to hands-on learning and communities to actionable insights.
+                            <?php echo htmlspecialchars($platformDescription); ?>
                         </p>
                     </div>
                 </div>
                 <div class="col-md-6">
                     <figure class="mb-0">             
-                        <img src="terrace rice.png" class="img-fluid rounded" alt="A vibrant rice field in the Philippines at dawn.">
-                        
-                        <figcaption class="figure-caption text-end mt-2">A vibrant rice field in the Philippines at dawn.</figcaption>
+                        <?php if ($imageExists): ?>
+                            <img src="<?php echo htmlspecialchars($imagePath); ?>" class="img-fluid rounded" alt="<?php echo htmlspecialchars($imageAltText); ?>">
+                            <figcaption class="figure-caption text-end mt-2"><?php echo htmlspecialchars($imageAltText); ?></figcaption>
+                        <?php else: ?>
+                            <div class="image-placeholder p-3 rounded">
+                                <p class="text-muted text-center mb-0">
+                                    <strong>Image not found.</strong><br>
+                                    Please check the path:<br>
+                                    <code><?php echo htmlspecialchars($imagePath); ?></code>
+                                </p>
+                            </div>
+                        <?php endif; ?>
                     </figure>
                 </div>
             </div>
