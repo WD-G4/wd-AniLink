@@ -10,7 +10,12 @@
   <style>
     body {
       font-family: 'Montserrat', sans-serif;
-      background-color: #F9FFD2;
+      background: url('./img/h2.jpg') no-repeat center center fixed;
+      background-size: cover;
+      background-attachment: fixed;
+      height: 100vh;
+      overflow: hidden;
+      margin: 0;
     }
     .btn-user {
       background-color: #ABC76D;
@@ -19,22 +24,28 @@
       background-color: #BBCB56;
     }
     .card {
-      height: 748px;
+      height: auto;
       width: 685px;
     }
     .title {
-      color: #758E3C;
+      color:rgb(97, 125, 31);
     }
     .sub-title {
-      color: #5A751D;
+      color:rgb(97, 125, 31);
     }
     .btn-submit {
       background-color: #5A751D;
     }
+    .glass {
+      backdrop-filter: blur(8px) brightness(100%);
+      background-color: rgba(255, 255, 255, 0.3);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      box-shadow: inset 4px 4px 10px 4px rgba(255, 255, 255, 0.2);
+}
   </style>
 </head>
-<body class="d-flex justify-content-center align-items-center shadow vh-100">
-  <div class="card shadow rounded-4 p-5 text-center d-flex justify-content-center align-items-center" style="background-color: #F6D965; max-width: 748px; width: 685px;">
+<body class="d-flex justify-content-center align-items-center shadow">
+  <div class="glass card shadow rounded-4 p-5 text-center d-flex justify-content-center align-items-center my-5" style="max-width: 748px; width: 685px;">
     <h2 class="title fw-bold mb-2">Welcome to AniBayan</h2>
     <p class="sub-title mb-4">Choose your portal</p>
     <div class="d-flex justify-content-center gap-3">
