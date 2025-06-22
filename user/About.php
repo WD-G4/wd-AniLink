@@ -2,7 +2,7 @@
     $pageTitle = "AniBayan - About Us";
     $platformDescription = "AniLinks is a platform that connects farmers to real-time data, students to hands-on learning and communities to actionable insights.";
     
-    $imagePath = "images/terrace-rice.png"; 
+    $imagePath = "img/terrace-rice.png"; 
     $imageAltText = "A vibrant rice field in the Philippines at dawn.";
 
     $imageExists = file_exists($imagePath);
