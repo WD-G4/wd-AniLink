@@ -5,7 +5,7 @@
     $imagePath = "img/terrace-rice.png"; 
     $imageAltText = "A vibrant rice field in the Philippines at dawn.";
 
-    $imageExists = file_exists($imageFilePath);
+    $imageExists = file_exists($imagePath);
 ?>
 <!DOCTYPE html
 <html lang="en">
