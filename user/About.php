@@ -108,13 +108,13 @@ $imageExists = file_exists($imagePath);
                 <ul class="navbar-nav d-flex align-items-md-center" style="font-family: 'Montserrat', sans-serif;">
                     <li class="nav-item">
                         <a href="Home.php" class="nav-link fw-bold text-uppercase mt-2 mx-2 px-md-3 px-2 py-md-2 py-1"
-                            style="color: #567119; background-color: #C9D76E; border-radius: 10px;">
+                            style="color: #567119; ">
                             Home
                         </a>
                     </li>
                     <li class="nav-item">
                         <a href="About.php" class="nav-link active fw-bold text-uppercase mt-2 mx-2 px-md-3 px-2 py-md-2 py-1"
-                            style="color: #567119;">
+                            style="color: #567119; background-color: #C9D76E; border-radius: 10px;">
                             About
                         </a>
                     </li>
