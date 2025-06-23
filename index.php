@@ -73,7 +73,7 @@
         </div>
         <div class="modal-body">
           <div class="container">
-            <form method="post" action="admin/HomeAdmin.php">
+            <form method="post" action="login.php">
               <div class="row mb-3">
                 <div class="col-12">
                   <label for="username" class="form-label">Username</label>
