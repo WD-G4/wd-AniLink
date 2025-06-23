@@ -1,3 +1,10 @@
+<?php
+session_start();
+if (!isset($_SESSION["admin_logged_in"])) {
+  header("Location: ../index.php");
+  exit();
+}
+?>
 <!doctype html>
 <html lang="en">
 
@@ -33,8 +40,8 @@ $isAdmin = true;
       <div class="AniBayan-text fw-bold fs-3" style="color: #567119; font-family: 'Montserrat', sans-serif;">
         AniBayan
         <?php
-            if($isAdmin) {?>
-        <button type="button" class=" admin btn btn-secondary" style="border-radius: 50%;">admin</button>
+        if ($isAdmin) { ?>
+          <button type="button" class=" admin btn btn-secondary" style="border-radius: 50%;">admin</button>
         <?php } ?>
       </div>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu"
@@ -59,6 +66,12 @@ $isAdmin = true;
             <a href="#" class="nav-link fw-bold text-uppercase mt-2 mx-2 px-md-3 px-2 py-md-2 py-1"
               style="color: #567119;">
               Product List
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="../logout.php" class="btn btn-success fw-bold text-uppercase mt-2 mx-2 px-md-3 px-2 py-md-2 py-1"
+              style="color:rgb(255, 255, 255);">
+              logout
             </a>
           </li>
         </ul>

@@ -56,6 +56,27 @@
 </head>
 
 <body class="d-flex justify-content-center align-items-center shadow">
+  <?php if (isset($_SESSION["login_error"])) { ?>
+    <div id="errorOverlay" class="d-flex justify-content-center align-items-center position-fixed top-0 start-0 w-100 h-100" style="z-index: 1055; background-color: rgba(0,0,0,0.2);">
+      <div class="alert alert-danger alert-dismissible fade show text-center w-auto" role="alert">
+        <?php
+        echo $_SESSION["login_error"];
+        unset($_SESSION["login_error"]);
+        ?>
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close" onclick="closeOverlay()"></button>
+      </div>
+    </div>
+
+    <script>
+      function closeOverlay() {
+        const overlay = document.getElementById('errorOverlay');
+        if (overlay) {
+          overlay.remove();
+        }
+      }
+    </script>
+  <?php } ?>
+
   <div class="glass card shadow rounded-4 p-5 text-center d-flex justify-content-center align-items-center my-5" style="max-width: 748px; width: 685px;">
     <h2 class="title fw-bold mb-2">Welcome to AniBayan</h2>
     <p class="sub-title mb-4">Choose your portal</p>

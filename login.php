@@ -17,8 +17,10 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
         }
 
         header("Location: admin/HomeAdmin.php");
+        exit();
     } else {
-        echo "NO USER FOUND";
+        $_SESSION['login_error'] = "Invalid username or password.";
+        header("Location: index.php");
+        exit();
     }
 }
-?>
