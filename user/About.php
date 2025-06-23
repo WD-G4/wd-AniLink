@@ -97,7 +97,7 @@ $imageExists = file_exists($imagePath);
 
     <nav class="navbar navbar-expand-md fixed-top" style="background-color: #CBB550;">
         <div class="container-fluid mt-2 px-5 py-3 d-flex align-items-center justify-content-between">
-            <div class="navbar-brand fw-bold fs-3" style="color: #567119; font-family: 'Montserrat', sans-serif;">
+            <div class="AniBayan-text fw-bold fs-3" style="color: #567119; font-family: 'Montserrat', sans-serif;">
                 AniBayan
             </div>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu"
@@ -107,28 +107,32 @@ $imageExists = file_exists($imagePath);
             <div class="collapse navbar-collapse justify-content-end" id="navMenu">
                 <ul class="navbar-nav d-flex align-items-md-center" style="font-family: 'Montserrat', sans-serif;">
                     <li class="nav-item">
-                        <a href="Home.php" class="nav-link fw-bold text-uppercase mt-2 mx-2 px-md-3 px-2 py-md-2 py-1">
+                        <a href="Home.php" class="nav-link fw-bold text-uppercase mt-2 mx-2 px-md-3 px-2 py-md-2 py-1"
+                            style="color: #567119; ">
                             Home
                         </a>
                     </li>
                     <li class="nav-item">
                         <a href="About.php" class="nav-link active fw-bold text-uppercase mt-2 mx-2 px-md-3 px-2 py-md-2 py-1"
-                            style="background-color: #C9D76E; border-radius: 10px;">
+                            style="color: #567119; background-color: #C9D76E; border-radius: 10px;">
                             About
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="Farmers.php" class="nav-link fw-bold text-uppercase mt-2 mx-2 px-md-3 px-2 py-md-2 py-1">
+                        <a href="Farmers.php" class="nav-link fw-bold text-uppercase mt-2 mx-2 px-md-3 px-2 py-md-2 py-1"
+                            style="color: #567119;">
                             Farmers
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="ProductList.php" class="nav-link fw-bold text-uppercase mt-2 mx-2 px-md-3 px-2 py-md-2 py-1">
+                        <a href="ProductList.php" class="nav-link fw-bold text-uppercase mt-2 mx-2 px-md-3 px-2 py-md-2 py-1"
+                            style="color: #567119;">
                             Products List
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="FindSupply.php" class="nav-link fw-bold text-uppercase mt-2 mx-2 px-md-3 px-2 py-md-2 py-1">
+                        <a href="FindSupply.php" class="nav-link fw-bold text-uppercase mt-2 mx-2 px-md-3 px-2 py-md-2 py-1"
+                            style="color: #567119;">
                             Find Supply
                         </a>
                     </li>
@@ -136,7 +140,6 @@ $imageExists = file_exists($imagePath);
             </div>
         </div>
     </nav>
-
 
     <main class="container my-5 py-md-4">
         <section aria-labelledby="intro-heading" class="mb-5 pb-md-4">
