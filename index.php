@@ -76,8 +76,8 @@
             <form method="post" action="admin/HomeAdmin.php">
               <div class="row mb-3">
                 <div class="col-12">
-                  <label for="Username" class="form-label">Username</label>
-                  <input type="Username" class="form-control" name="Username" required>
+                  <label for="username" class="form-label">Username</label>
+                  <input type="username" class="form-control" name="username" required>
                 </div>
               </div>
               <div class="row mb-3">
