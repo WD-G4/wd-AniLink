@@ -140,12 +140,12 @@
             </div>
             <div class="col-md-6">
                 <figure class="mb-0">
-                    <?php if ($imageExists): ?>
+                    <?php if ($imageExists){?>
                         <img src="<?php echo htmlspecialchars($imagePath); ?>" class="img-fluid rounded interactive-image" alt="<?php echo htmlspecialchars($imageAltText); ?>">
                         <figcaption class="figure-caption text-center mt-2">
                             <?php echo htmlspecialchars($imageAltText); ?>
                         </figcaption>
-                    <?php else: ?>
+                    <?php } {?>
                         <div class="image-placeholder p-3 rounded">
                             <p class="text-muted text-center mb-0">
                                 <strong>Image not found.</strong><br>
@@ -153,7 +153,7 @@
                                 <code><?php echo htmlspecialchars($imagePath); ?></code>
                             </p>
                         </div>
-                    <?php endif; ?>
+                    <?php } ?>
                 </figure>
             </div>
         </div>
