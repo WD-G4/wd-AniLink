@@ -1,79 +1,64 @@
 <?php
-$farmers = [
-    [
-        'name'      => 'Juan Dela Cruz',
-        'specialty' => 'Organic Vegetables Farmer',
-        'location'  => 'Benguet, Philippines',
-        'image'     => '../img/Juan.jpg'
-    ],
-    [
-        'name'      => 'Rose Santos',
-        'specialty' => 'Rice and Corn Grower',
-        'location'  => 'Nueva Ecija, Philippines',
-        'image'     => '../img/Rose.png'
-    ],
-];
-
+$currentPage = 'farmers';
+$farmer_count = 4;
 ?>
 <!doctype html>
-<html lang="en">
+<html lang="tl">
 
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>AniBayan - Partner Farmers</title>
+    <title>AniBayan - Farmers</title>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
 
     <style>
-        :root {
-            --brand-color: #70705a;
-            --text-primary: #333;
-            --text-secondary: #555;
-            --body-font: 'Poppins', sans-serif;
-        }
-
         body {
-            font-family: var(--body-font);
-            color: var(--text-primary);
-            background-color: #fff;
-            padding-top: 120px;
+            padding-top: 100px;
+            background-color: #F9FFD2;
+            font-family: 'Montserrat', sans-serif;
+            color: #5A5A4D;
         }
 
-        .navbar-nav .nav-link:not(.active) {
-            color: #567119 !important;
+        .navbar-nav .nav-link.active {
+            background-color: #C9D76E;
+            border-radius: 10px;
+        }
+
+        main.container {
+            max-width: 840px; 
+        }
+
+        .page-title {
+            font-weight: 700;
+            color: #5A5A4D;
+            font-size: 1.5rem; 
         }
 
         .farmer-card {
-            background-color: #E6E9A5;
-            transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+            background-color: #F0EFE4;
+            padding: 20px; 
+            margin-bottom: 24px;
         }
 
-        .farmer-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-        }
-
-        .farmer-card .img-placeholder {
-            background-color: #f8f9fa;
-            border-radius: 10px;
-            height: 180px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #ccc;
-            overflow: hidden;
-        }
-
-
-        .farmer-card .img-placeholder img {
+        .image-placeholder {
+            background-color: #D9D9D9;
             width: 100%;
-            height: 100%;
-            object-fit: cover;
+            aspect-ratio: 1 / 1;
+            margin-bottom: 20px;
+            position: relative;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23B0B0B0'%3E%3Cpath d='M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 50%;
+        }
+
+        .farmer-details p {
+            margin-bottom: 8px;
+            color: #5A5A4D;
+            font-size: 0.95rem;
         }
     </style>
 </head>
@@ -81,72 +66,67 @@ $farmers = [
 <body>
 
     <nav class="navbar navbar-expand-md fixed-top" style="background-color: #CBB550;">
-        <div class="container-fluid px-5 py-3">
-            <a class="navbar-brand fw-bold fs-3" href="index.php" style="color: #567119; font-family: 'Montserrat', sans-serif;">
+        <div class="container-fluid mt-2 px-5 py-3 d-flex align-items-center justify-content-between">
+            <div class="AniBayan-text fw-bold fs-3" style="color: #567119; font-family: 'Montserrat', sans-serif;">
                 AniBayan
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu"
-                    aria-controls="navMenu" aria-expanded="false" aria-label="Toggle Navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-
-                <div class="collapse navbar-collapse justify-content-end" id="navMenu">
-                    <ul class="navbar-nav" style="font-family: 'Montserrat', sans-serif;">
-                        <li class="nav-item">
-                            <a href="index.php" class="nav-link fw-bold text-uppercase mx-2 px-md-3 px-2 py-md-2 py-1">
-                                Home
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="About.php" class="nav-link fw-bold text-uppercase mx-2 px-md-3 px-2 py-md-2 py-1">
-                                About
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="Farmers.php" class="nav-link active fw-bold text-uppercase mx-2 px-md-3 px-2 py-md-2 py-1"
-                                style="color: #567119; background-color: #C9D76E; border-radius: 10px;">
-                                Farmers
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#" class="nav-link fw-bold text-uppercase mx-2 px-md-3 px-2 py-md-2 py-1">
-                                Products List
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#" class="nav-link fw-bold text-uppercase mx-2 px-md-3 px-2 py-md-2 py-1">
-                                Find Supply
-                            </a>
-                        </li>
-                    </ul>
-                </div>
+            </div>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navMenu">
+                <ul class="navbar-nav d-flex align-items-md-center" style="font-family: 'Montserrat', sans-serif;">
+                    <li class="nav-item">
+                        <a href="Home.php" class="nav-link fw-bold text-uppercase mt-2 mx-2 px-md-3 px-2 py-md-2 py-1" style="color: #567119;">
+                            Home
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="About.php" class="nav-link fw-bold text-uppercase mt-2 mx-2 px-md-3 px-2 py-md-2 py-1" style="color: #567119;">
+                            About
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="Farmers.php" class="nav-link active fw-bold text-uppercase mt-2 mx-2 px-md-3 px-2 py-md-2 py-1" style="color: #567119; background-color: #C9D76E; border-radius: 10px;">
+                            Farmers
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="ProductList.php" class="nav-link fw-bold text-uppercase mt-2 mx-2 px-md-3 px-2 py-md-2 py-1" style="color: #567119;">
+                            Products List
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="FindSupply.php" class="nav-link fw-bold text-uppercase mt-2 mx-2 px-md-3 px-2 py-md-2 py-1" style="color: #567119;">
+                            Find Supply
+                        </a>
+                    </li>
+                </ul>
+            </div>
         </div>
     </nav>
 
-    <main class="container my-5">
-        <div class="text-center mb-5">
-            <h1 class="fw-bold" style="color: var(--brand-color);">Partner Farmers</h1>
-            <p class="lead" style="color: var(--text-secondary);">The heart and soul of AniBayan. Get to know the dedicated individuals who grow your food.</p>
-        </div>
-
-        <div class="row justify-content-center g-4">
-
-            <?php foreach ($farmers as $farmer) { ?>
-                <div class="col-md-6 col-lg-5">
-                    <div class="farmer-card p-4 rounded">
-                        <div class="img-placeholder mb-3">
-                            <img src="<?php echo htmlspecialchars($farmer['image']); ?>" alt="Picture of <?php echo htmlspecialchars($farmer['name']); ?>">
+    <main class="container mt-5">
+        <h1 class="page-title mb-4">MEET OUR LOCAL FARMERS</h1>
+        <div class="row g-4">
+            <?php for ($i = 0; $i < $farmer_count; $i++) : ?>
+                <div class="col-lg-6 col-md-6">
+                    <div class="farmer-card">
+                        <div class="image-placeholder"></div>
+                        <div class="farmer-details">
+                            <p>Name:</p>
+                            <p>Location:</p>
+                            <p>Harvest Type:</p>
+                            <p>Contact:</p>
                         </div>
-                        <h4 class="fw-bold mb-1" style="color: #567119;"><?php echo htmlspecialchars($farmer['name']); ?></h4>
-                        <p class="mb-1 text-muted"><?php echo htmlspecialchars($farmer['specialty']); ?></p>
-                        <p class="mb-0"><i class="bi bi-geo-alt-fill me-1"></i><?php echo htmlspecialchars($farmer['location']); ?></p>
+
                     </div>
                 </div>
-            <?php } ?>
-
+            <?php endfor; ?>
         </div>
     </main>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"></script>
+
 </body>
 
 </html>
