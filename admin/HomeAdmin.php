@@ -29,9 +29,6 @@ if (!isset($_SESSION["admin_logged_in"])) {
   </style>
 </head>
 
-<?php
-$isAdmin = true;
-?>
 
 <body>
 
@@ -39,10 +36,7 @@ $isAdmin = true;
     <div class="container-fluid mt-2 px-5 py-3 d-flex align-items-center justify-content-between">
       <div class="AniBayan-text fw-bold fs-3" style="color: #567119; font-family: 'Montserrat', sans-serif;">
         AniBayan
-        <?php
-        if ($isAdmin) { ?>
           <button type="button" class=" admin btn btn-secondary" style="border-radius: 50%;">admin</button>
-        <?php } ?>
       </div>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu"
         aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation">
