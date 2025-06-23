@@ -16,7 +16,7 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
             $_SESSION["admin_password"] = $row['password'];
         }
 
-        header("Location: admin/index.php");
+        header("Location: admin/HomeAdmin.php");
     } else {
         echo "NO USER FOUND";
     }
