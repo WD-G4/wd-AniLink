@@ -26,11 +26,9 @@ $imageExists = file_exists($imagePath);
             --brand-color: #70705a;
             --text-primary: #333;
             --text-secondary: #555;
-            --body-font: 'Poppins', sans-serif;
         }
 
         body {
-            font-family: var(--body-font);
             color: var(--text-primary);
             background-color: #fff;
             padding-top: 120px;
