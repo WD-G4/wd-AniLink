@@ -1,12 +1,15 @@
+<?php session_start(); ?>
+
 <!doctype html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>AniBayan</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
-  <?php session_start(); ?>
+
   <style>
     body {
       font-family: 'Montserrat', sans-serif;
@@ -17,33 +20,41 @@
       overflow: hidden;
       margin: 0;
     }
+
     .btn-user {
       background-color: #BBCB56;
     }
+
     .btn-admin {
       background-color: #BBCB56;
     }
+
     .card {
       height: auto;
       width: 685px;
     }
+
     .title {
-      color:rgb(56, 80, 2);
+      color: rgb(56, 80, 2);
     }
+
     .sub-title {
-      color:rgb(63, 90, 0);
+      color: rgb(63, 90, 0);
     }
+
     .btn-submit {
       background-color: #5A751D;
     }
+
     .glass {
       backdrop-filter: blur(8px) brightness(100%);
       background-color: rgba(255, 255, 255, 0.3);
       border: 1px solid rgba(255, 255, 255, 0.3);
       box-shadow: inset 4px 4px 10px 4px rgba(255, 255, 255, 0.2);
-}
+    }
   </style>
 </head>
+
 <body class="d-flex justify-content-center align-items-center shadow">
   <div class="glass card shadow rounded-4 p-5 text-center d-flex justify-content-center align-items-center my-5" style="max-width: 748px; width: 685px;">
     <h2 class="title fw-bold mb-2">Welcome to AniBayan</h2>
@@ -66,7 +77,7 @@
               <div class="row mb-3">
                 <div class="col-12">
                   <label for="Username" class="form-label">Username</label>
-                  <input type="Username" class="form-control"  name="Username" required>
+                  <input type="Username" class="form-control" name="Username" required>
                 </div>
               </div>
               <div class="row mb-3">
@@ -77,7 +88,7 @@
               </div>
               <div class="row">
                 <div class="col-12">
-                  <button type="submit" class="btn-submit btn btn-success w-100" >Login</button>
+                  <button type="submit" class="btn-submit btn btn-success w-100">Login</button>
                 </div>
               </div>
             </form>
@@ -89,4 +100,5 @@
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>
