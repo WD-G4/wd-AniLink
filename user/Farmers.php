@@ -1,4 +1,19 @@
 <?php
+$farmers = [
+    [
+        'name'      => 'Juan Dela Cruz',
+        'specialty' => 'Organic Vegetables Farmer',
+        'location'  => 'Benguet, Philippines',
+        'image'     => '../img/Juan.jpg' 
+    ],
+    [
+        'name'      => 'Rose Santos',
+        'specialty' => 'Rice and Corn Grower',
+        'location'  => 'Nueva Ecija, Philippines',
+        'image'     => '../img/Rose.png' 
+    ],
+];
+
 $isAdmin = true; 
 ?>
 <!doctype html>
@@ -49,12 +64,19 @@ $isAdmin = true;
             align-items: center;
             justify-content: center;
             color: #ccc;
+            overflow: hidden; 
+        }
+        
+        
+        .farmer-card .img-placeholder img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; 
         }
     </style>
   </head>
 
   <body>
-
 
   <nav class="navbar navbar-expand-md fixed-top" style="background-color: #CBB550;">
     <div class="container-fluid px-5 py-3">
@@ -110,26 +132,20 @@ $isAdmin = true;
     </div>
     
     <div class="row justify-content-center g-4">
+
+        <?php foreach ($farmers as $farmer): ?>
         <div class="col-md-6 col-lg-5">
             <div class="farmer-card p-4 rounded">
                 <div class="img-placeholder mb-3">
-                    <i class="bi bi-person-bounding-box fs-1"></i> 
+                    <img src="<?php echo htmlspecialchars($farmer['image']); ?>" alt="Picture of <?php echo htmlspecialchars($farmer['name']); ?>">
                 </div>
-                <h4 class="fw-bold mb-1" style="color: #567119;">Juan Dela Cruz</h4>
-                <p class="mb-1 text-muted">Organic Vegetables Farmer</p>
-                <p class="mb-0"><i class="bi bi-geo-alt-fill me-1"></i>Benguet, Philippines</p>
+                <h4 class="fw-bold mb-1" style="color: #567119;"><?php echo htmlspecialchars($farmer['name']); ?></h4>
+                <p class="mb-1 text-muted"><?php echo htmlspecialchars($farmer['specialty']); ?></p>
+                <p class="mb-0"><i class="bi bi-geo-alt-fill me-1"></i><?php echo htmlspecialchars($farmer['location']); ?></p>
             </div>
         </div>
-        <div class="col-md-6 col-lg-5">
-            <div class="farmer-card p-4 rounded">
-                <div class="img-placeholder mb-3">
-                    <i class="bi bi-person-bounding-box fs-1"></i> 
-                </div>
-                <h4 class="fw-bold mb-1" style="color: #567119;">Rose Santos</h4>
-                <p class="mb-1 text-muted">Rice and Corn Grower</p>
-                <p class="mb-0"><i class="bi bi-geo-alt-fill me-1"></i>Nueva Ecija, Philippines</p>
-            </div>
-        </div>
+        <?php endforeach; ?>
+        
     </div>
   </main>
 
