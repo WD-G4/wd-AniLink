@@ -61,11 +61,6 @@ $imageExists = file_exists($imagePath);
             justify-content: center;
             min-height: 250px;
         }
-
-        .navbar-nav .nav-link:not(.active) {
-            color: #567119 !important;
-        }
-
         @keyframes bounceEffect {
 
             0%,
