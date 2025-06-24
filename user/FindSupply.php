@@ -105,36 +105,52 @@ $product_count = 2;
 
 <body>
 
-    <nav class="navbar navbar-expand-md fixed-top" style="background-color: #CBB550;">
-        <div class="container-fluid mt-2 px-5 py-3 d-flex align-items-center justify-content-between">
-            <div class="AniBayan-text fw-bold fs-3" style="color: #567119; font-family: 'Montserrat', sans-serif;">
-                AniBayan
-            </div>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse justify-content-end" id="navMenu">
-                <ul class="navbar-nav d-flex align-items-md-center" style="font-family: 'Montserrat', sans-serif;">
-                    <li class="nav-item">
-                        <a href="Home.php" class="nav-link fw-bold text-uppercase mt-2 mx-2 px-md-3 px-2 py-md-2 py-1" style="color: #567119;">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="About.php" class="nav-link fw-bold text-uppercase mt-2 mx-2 px-md-3 px-2 py-md-2 py-1" style="color: #567119;">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="Farmers.php" class="nav-link fw-bold text-uppercase mt-2 mx-2 px-md-3 px-2 py-md-2 py-1" style="color: #567119;">Farmers</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="ProductList.php" class="nav-link fw-bold text-uppercase mt-2 mx-2 px-md-3 px-2 py-md-2 py-1" style="color: #567119;">Products List</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="FindSupply.php" class="nav-link active fw-bold text-uppercase mt-2 mx-2 px-md-3 px-2 py-md-2 py-1" style="color: #567119; background-color: #C9D76E; border-radius: 10px;">Find Supply</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-
+    <nav class="navbar navbar-expand-md fixed-top" style="background-color: #006912;">
+    <div class="container-fluid mt-2 px-5 py-3 d-flex align-items-center justify-content-between">
+      <div class="AniBayan-text fw-bold fs-3" style="color: #FFFFFF; font-family: 'Montserrat', sans-serif;">
+        AniBayan
+      </div>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu"
+        aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navMenu">
+        <ul class="navbar-nav d-flex align-items-md-center" style="font-family: 'Montserrat', sans-serif;">
+          <li class="nav-item">
+            <a href="Home.php" class="nav-link fw-bold text-uppercase mt-2 mx-2 px-md-3 px-2 py-md-2 py-1"
+              style="color: #FFFFFF;">
+              Home
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="About.php" class="nav-link fw-bold text-uppercase mt-2 mx-2 px-md-3 px-2 py-md-2 py-1"
+              style="color: #FFFFFF;">
+              About
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="Farmers.php" class="nav-link fw-bold text-uppercase mt-2 mx-2 px-md-3 px-2 py-md-2 py-1"
+              style="color: #FFFFFF;">
+              Farmers
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="ProductList.php" class="nav-link fw-bold text-uppercase mt-2 mx-2 px-md-3 px-2 py-md-2 py-1"
+              style="color: #FFFFFF;">
+              Products List
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="FindSupply.php" class="nav-link active fw-bold text-uppercase mt-2 mx-2 px-md-3 px-2 py-md-2 py-1"
+              style="color: #FFFFFF; border-bottom: 3px solid #EFDE92;">
+              Find Supply
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  
     <main class="container mt-5">
         <h1 class="page-title mb-4">Find Supply Near You</h1>
 
