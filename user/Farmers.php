@@ -59,22 +59,23 @@ $farmer_count = 4;
         </div>
     </nav>
 
-
-    <div class="row">
-        <?php for ($i = 0; $i < $farmer_count; $i++) { ?>
-            <div class="col-md-6 mb-4 d-flex justify-content-center">
-                <div class="card d-flex flex-column" style="width: 100%; max-width: 30rem; height: 30rem;">
-                    <img src="..." alt="..." class="img-fluid" style="object-fit: cover; height: 300px;">
-                    <div class="mt-auto p-3">
-                        <p class="mb-2">Name:</p>
-                        <p class="mb-2">Location:</p>
-                        <p class="mb-2">Harvest Type:</p>
-                        <p class="mb-2">Contact:</p>
+    <div class="container mt-5" style="max-width: 840px;">
+        <h1 class="fw-bold fs-4 mb-4">MEET OUR LOCAL FARMERS</h1>
+        <div class="row">
+            <?php for ($i = 0; $i < $farmer_count; $i++) { ?>
+                <div class="col-md-6 mb-4 d-flex justify-content-center">
+                    <div class="card d-flex flex-column" style="width: 100%; max-width: 30rem; height: 30rem;">
+                        <img src="..." alt="..." class="img-fluid" style="object-fit: cover; height: 300px;">
+                        <div class="mt-auto p-3">
+                            <p class="mb-2">Name:</p>
+                            <p class="mb-2">Location:</p>
+                            <p class="mb-2">Harvest Type:</p>
+                            <p class="mb-2">Contact:</p>
+                        </div>
                     </div>
                 </div>
-            </div>
-        <?php } ?>
-    </div>
+            <?php } ?>
+        </div>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"></script>
