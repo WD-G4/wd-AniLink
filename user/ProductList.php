@@ -51,7 +51,7 @@ $productList = 6;
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="ProductList.php" class="nav-link activefw-bold text-uppercase mt-2 mx-2 px-md-3 px-2 py-md-2 py-1"
+                        <a href="ProductList.php" class="nav-link active fw-bold text-uppercase mt-2 mx-2 px-md-3 px-2 py-md-2 py-1"
                             style="color: #FFFFFF; border-bottom: 3px solid #EFDE92;">
                             Products List
                         </a>
