@@ -36,7 +36,7 @@ if (!isset($_SESSION["admin_logged_in"])) {
     <div class="container-fluid mt-2 px-5 py-3 d-flex align-items-center justify-content-between">
       <div class="AniBayan-text fw-bold fs-3" style="color: #567119; font-family: 'Montserrat', sans-serif;">
         AniBayan
-          <button type="button" class=" admin btn btn-secondary" style="border-radius: 50%;">admin</button>
+        <button type="button" class=" admin btn btn-secondary" style="border-radius: 50%;">admin</button>
       </div>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu"
         aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation">
@@ -75,19 +75,30 @@ if (!isset($_SESSION["admin_logged_in"])) {
 
   <div class="container py-5">
     <div class="d-flex justify-content-center mb-4">
-      <div class="Title h1 fw-bold text-uppercase" style="color: #567119; font-family:'Montserrat', sans-serif;">FRESHLY HARVESTED</div>
+      <div class="Title h1 fw-bold text-uppercase" style="color: #567119; font-family:'Montserrat', sans-serif;">Dashboard</div>
     </div>
     <div class="row align-items-center">
-      <div class="col-md-6">
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Explicabo odio itaque tempore amet mollitia vitae eligendi ducimus aliquam animi illo saepe, alias eius accusamus dolorum consectetur possimus nisi iste at!</p>
+      <div class="col-md-6 my-4 d-flex justify-content-center">
+        <div class="card rounded-5 shadow" style="width: 30rem; height: 30rem;">
+          <img src="..." class="card-img-top" alt="...">
+          <div class="position-absolute overlay-text">
+            Total Farmers
+            <div class="d-flex justify-content-center">0000</div>
+          </div>
+        </div>
       </div>
-      <div class="col-md-6 text-end">
-        <img src="../img/pic.png" alt="pek" class="img-fluid">
+      <div class="col-md-6 d-flex justify-content-center">
+        <div class="card rounded-5 shadow" style="width: 30rem; height: 30rem;">
+          <img src="..." class="card-img-top" alt="...">
+          <div class="position-absolute overlay-text">
+            Total Products
+            <div class="d-flex justify-content-center">0000</div>
+          </div>
+        </div>
       </div>
     </div>
-  </div>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>
