@@ -11,6 +11,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
 
 </head>
+
 <body>
 
   <nav class="navbar navbar-expand-md fixed-top" style="background-color: #006912;">
@@ -64,15 +65,12 @@
     <div class="container position-relative z-1 d-flex align-items-center justify-content-center text-center" style="height:100vh;">
       <div class="row">
         <div class="col-12 p-3 text-center">
-          <!-- Title -->
           <h1 class="fw-bold mb-3 d-none d-lg-block"
             style="text-transform:uppercase; letter-spacing:2px; color:#FFFFFF; font-size:80px;">AniBayan</h1>
           <h1 class="fw-bold mb-3 d-none d-md-block d-lg-none"
             style="text-transform:uppercase; letter-spacing:2px; color:#FFFFFF; font-size:60px;">AniBayan</h1>
           <h1 class="fw-bold mb-3 d-block d-md-none"
             style="text-transform:uppercase; letter-spacing:2px; color:#FFFFFF; font-size:45px;">AniBayan</h1>
-
-          <!-- Subtitle -->
           <p class="mx-auto d-none d-lg-block"
             style="max-width:700px; color:#FFFFFF; font-size:28px;">Support Local. Eat Fresh. Save More.</p>
           <p class="mx-auto d-none d-md-block d-lg-none"
