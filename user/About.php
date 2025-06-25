@@ -21,7 +21,7 @@ $imageExists = file_exists($imagePath);
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
 
-    
+
 </head>
 
 <body class="bg-white text-dark" style="padding-top: 120px;">
@@ -86,25 +86,39 @@ $imageExists = file_exists($imagePath);
                     </div>
                 </div>
                 <div class="col-md-6">
-                    <figure class="mb-0">
-                        <?php if ($imageExists) { ?>
-                            <img src="<?php echo htmlspecialchars($imagePath); ?>" class="img-fluid rounded" alt="<?php echo htmlspecialchars($imageAltText); ?>">
-                            <figcaption class="figure-caption text-center mt-2">
-                                <?php echo htmlspecialchars($imageAltText); ?>
-                            </figcaption>
-                        <?php } else { ?>
-                            <div class="bg-light border border-dashed d-flex align-items-center justify-content-center p-3 rounded" style="min-height: 250px;">
-                                <p class="text-muted text-center mb-0">
-                                    <strong>Image not found.</strong><br>
-                                    Please check the path:<br>
-                                    <code><?php echo htmlspecialchars($imagePath); ?></code>
-                                </p>
+                    <div id="aboutCarousel" class="carousel slide rounded overflow-hidden" data-bs-ride="carousel" data-bs-interval="3000">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="../img/terrace-rice.png" class="d-block w-100" alt="Rice terraces" style="height: 350px; object-fit: cover;">
                             </div>
-                        <?php } ?>
-                    </figure>
+                            <div class="carousel-item">
+                                <img src="../img/p1.jpg" class="d-block w-100" alt="Market scene" style="height: 350px; object-fit: cover;">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="../img/p2.jpg" class="d-block w-100" alt="Fresh fruits" style="height: 350px; object-fit: cover;">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="../img/p3.jpg" class="d-block w-100" alt="Harvest" style="height: 350px; object-fit: cover;">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="../img/p4.jpg" class="d-block w-100" alt="Harvest" style="height: 350px; object-fit: cover;">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="../img/p5.webp" class="d-block w-100" alt="Harvest" style="height: 350px; object-fit: cover;">
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#aboutCarousel" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#aboutCarousel" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
                 </div>
-            </div>
         </section>
+
 
         <section aria-labelledby="mission-heading" class="mt-5 pt-md-4">
             <div class="row justify-content-center">
