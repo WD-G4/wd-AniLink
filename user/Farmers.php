@@ -61,20 +61,23 @@ $result = executeQuery($query);
         </div>
     </nav>
 
-    <div class="row">
-        <?php while ($row = mysqli_fetch_assoc($result)) { ?>
-            <div class="col-md-6 mb-4 d-flex justify-content-center">
-                <div class="card d-flex flex-column" style="width: 100%; max-width: 35rem; height: 35rem;">
-                    <img src="<?php echo '../img/' . $row['imagePath']; ?>" alt="<?php echo $row['name']; ?>" class="img-fluid" style="object-fit: cover; height: 400px;">
-                    <div class="mt-auto p-3">
-                        <p class="mb-2">Name: <?php echo htmlspecialchars($row['name']); ?></p>
-                        <p class="mb-2">Location: <?php echo htmlspecialchars($row['address']); ?></p>
-                        <p class="mb-2">Product: <?php echo htmlspecialchars($row['productName']); ?></p>
+    <div class="container mt-5" style="max-width: 840px;">
+        <h1 class="fw-bold fs-4 mb-4">MEET OUR LOCAL FARMERS</h1>
+
+        <div class="row">
+            <?php while ($row = mysqli_fetch_assoc($result)) { ?>
+                <div class="col-md-6 mb-4 d-flex justify-content-center">
+                    <div class="card d-flex flex-column" style="width: 100%; max-width: 35rem; height: 35rem;">
+                        <img src="<?php echo '../img/' . $row['imagePath']; ?>" alt="<?php echo $row['name']; ?>" class="img-fluid" style="object-fit: cover; height: 400px;">
+                        <div class="mt-auto p-3">
+                            <p class="mb-2">Name: <?php echo htmlspecialchars($row['name']); ?></p>
+                            <p class="mb-2">Location: <?php echo htmlspecialchars($row['address']); ?></p>
+                            <p class="mb-2">Product: <?php echo htmlspecialchars($row['productName']); ?></p>
+                        </div>
                     </div>
                 </div>
-            </div>
-        <?php } ?>
-    </div>
+            <?php } ?>
+        </div>
 
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"></script>
