@@ -1,7 +1,7 @@
 <?php
 include('../connect.php');
 
-$query = "SELECT farmers.name, farmers.address, product.productName, product.productPricePerKilo, product.imagePath FROM product LEFT JOIN farmers ON product.farmerId = farmers.id";
+$query = "SELECT farmers.name, farmers.address, product.productName, product.productPricePerKilo, product.imagePath FROM product JOIN farmers ON product.farmerId = farmers.id";
 $result = executeQuery($query);
 ?>
 

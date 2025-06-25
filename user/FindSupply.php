@@ -1,6 +1,17 @@
 <?php
-$product_count = 2;
+include('../connect.php');
+
+$search = isset($_GET['search']) ? mysqli_real_escape_string($conn, $_GET['search']) : '';
+
+$query = "SELECT farmers.name, farmers.address, product.productName, product.productPricePerKilo, product.imagePath FROM product JOIN farmers ON product.farmerId = farmers.id";
+
+if (!empty($search)) {
+  $query .= " WHERE product.productName LIKE '%$search%' OR farmers.name LIKE '%$search%' OR farmers.address LIKE '%$search%'";
+}
+
+$result = mysqli_query($conn, $query);
 ?>
+
 <!doctype html>
 <html lang="tl">
 
@@ -71,36 +82,35 @@ $product_count = 2;
   </nav>
 
   <div class="container mt-5">
-    <h1 class="fw-bold mb-4 text-center">Find Supply Near You</h1>
-
-    <form class="row g-3 align-items-center mb-5 justify-content-center">
+    <form method="GET" class="row g-3 align-items-center mb-5 justify-content-center">
       <div class="col-10 col-md-6">
-        <input type="search" class="form-control" placeholder="Search">
+        <input type="search" class="form-control" name="search" placeholder="Search" value="<?php echo isset($_GET['search']) ? htmlspecialchars($_GET['search']) : ''; ?>">
       </div>
       <div class="col-auto">
         <button type="submit" class="btn btn-success">Search</button>
       </div>
     </form>
-
+  </div>
+  
+  <div class="container mt-5">
     <div class="row justify-content-center">
-      <div class="col-12 col-md-10 col-lg-8">
-        <?php for ($i = 0; $i < $product_count; $i++) { ?>
-          <div class="card mb-4 p-3 d-flex flex-row align-items-center"
-            style="background-color: #ffffff; border: none; border-radius: 15px; min-height: 130px;">
-            <div class="me-4">
-              <img src="../img/pic.png" alt="Product Image"
-                style="width: 100px; height: 100px; border-radius: 10px; object-fit: cover;">
+      <?php while ($row = mysqli_fetch_assoc($result)) { ?>
+        <div class="col-12 col-md-8 col-lg-4 mb-4">
+          <div class="card p-3 mb-4" style="background-color: #ffffff; border: none; border-radius: 10px; max-width: 500px; height: 355px;">
+            <div class="d-flex">
+              <img src="../img/<?php echo htmlspecialchars($row['imagePath']); ?>" alt="Product Image" style="width: 180px; height: 180px; border-radius: 5px; object-fit: cover; margin-right: 15px;">
+              <div class="d-flex align-items-center">
+                <p class="fw-bold mb-2">Product Name: <?php echo htmlspecialchars($row['productName']); ?></p>
+              </div>
             </div>
-            <div class="flex-grow-1">
-              <h5 class="fw-bold mb-2">Product Name:</h5>
-              <p class="mb-1">Farmer:</p>
-              <p class="mb-1">Location:</p>
-              <p class="mb-1">Price:</p>
-              <p class="mb-0">Contact:</p>
+            <div class="mt-auto p-3">
+              <p class="fw-bold mb-2">Farmer: <?php echo htmlspecialchars($row['name']); ?></p>
+              <p class="fw-bold mb-2">Location: <?php echo htmlspecialchars($row['address']); ?></p>
+              <p class="fw-bold mb-2">Price: ₱<?php echo number_format($row['productPricePerKilo'], 2); ?></p>
             </div>
           </div>
-        <?php } ?>
-      </div>
+        </div>
+      <?php } ?>
     </div>
   </div>
 
