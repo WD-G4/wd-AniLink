@@ -1,7 +1,11 @@
 <?php
-$currentPage = 'farmers';
-$productList = 6;
+include('../connect.php');
+
+$query = "SELECT farmers.name, farmers.address, product.productName, product.productPricePerKilo, product.imagePath FROM product LEFT JOIN farmers ON product.farmerId = farmers.id";
+$result = executeQuery($query);
 ?>
+
+
 <!doctype html>
 <html lang="en">
 
@@ -10,7 +14,7 @@ $productList = 6;
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Product List</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
-      <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <style>
     body {
@@ -82,20 +86,19 @@ $productList = 6;
 
     <div class="container mt-5">
         <div class="row justify-content-center">
-            <?php for ($i = 0; $i < $productList; $i++) { ?>
+            <?php while ($row = mysqli_fetch_assoc($result)) { ?>
                 <div class="col-12 col-md-8 col-lg-4 mb-4">
                     <div class="card p-3 mb-4" style="background-color: #ffffff; border: none; border-radius: 10px; max-width: 500px; height: 355px;">
-
                         <div class="d-flex">
-                            <img src="../img/pic.png" alt="Product Image" style="width: 180px; height: 180px; border-radius: 5px; object-fit: cover; margin-right: 15px;">
+                            <img src="../img/<?php echo htmlspecialchars($row['imagePath']); ?>" alt="Product Image" style="width: 180px; height: 180px; border-radius: 5px; object-fit: cover; margin-right: 15px;">
                             <div class="d-flex align-items-center">
-                                <p class="fw-bold mb-2 align">Product Name:</p>
+                                <p class="fw-bold mb-2">Product Name: <?php echo htmlspecialchars($row['productName']); ?></p>
                             </div>
                         </div>
                         <div class="mt-auto p-3">
-                            <p class="fw-bold mb-2">Farmer:</p>
-                            <p class="fw-bold mb-2">Location:</p>
-                            <p class="fw-bold mb-2">Price: ₱00.00</p>
+                            <p class="fw-bold mb-2">Farmer: <?php echo htmlspecialchars($row['name']); ?></p>
+                            <p class="fw-bold mb-2">Location: <?php echo htmlspecialchars($row['address']); ?></p>
+                            <p class="fw-bold mb-2">Price: ₱<?php echo number_format($row['productPricePerKilo'], 2); ?></p>
                         </div>
                     </div>
                 </div>
