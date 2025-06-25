@@ -5,107 +5,26 @@ $product_count = 2;
 <html lang="tl">
 
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>AniBayan - Find Supply</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AniBayan - Find Supply</title>
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
 
-    <style>
-        body {
-            font-family: 'Montserrat', sans-serif;
-            background-color: #FFFFFF;
-            color: #5A5A4D;
-            padding-top: 100px;
-        }
-
-        main.container {
-            max-width: 960px;
-        }
-
-        .page-title {
-            font-weight: 700;
-            color: #5A5A4D;
-            font-size: 1.75rem;
-        }
-
-        .search-bar .form-control {
-            background-color: #EAEAEA;
-            border: 1px solid #EAEAEA;
-            border-radius: 12px;
-            padding: 12px 20px;
-        }
-
-        .search-bar .form-control:focus {
-            background-color: #FFFFFF;
-            border-color: #70705a;
-            box-shadow: none;
-        }
-
-        .search-bar .btn {
-            background-color: #D9D9D9;
-            color: #5A5A4D;
-            font-weight: 700;
-            border: none;
-            border-radius: 12px;
-            padding: 12px 30px;
-        }
-
-        .product-card {
-            background-color: #EAEAEA;
-            border-radius: 15px;
-            padding: 1.5rem;
-            margin-bottom: 1.5rem;
-            display: flex;
-            gap: 1.5rem;
-            align-items: center;
-        }
-
-        .product-details h4 {
-            font-family: 'Montserrat', sans-serif;
-            color: #5A5A4D;
-            font-weight: 700;
-            margin-bottom: 0.75rem;
-        }
-
-        .product-details p {
-            margin-bottom: 0.25rem;
-            color: #555;
-            font-size: 0.95rem;
-        }
-
-        .product-image-placeholder {
-            width: 120px;
-            height: 120px;
-            background-color: #C1C1A6;
-            border-radius: 10px;
-            flex-shrink: 0;
-            position: relative;
-        }
-
-        .product-image-placeholder .line {
-            position: absolute;
-            top: 50%;
-            left: 10%;
-            width: 80%;
-            height: 2px;
-            background-color: #F0EFE4;
-        }
-
-        .product-image-placeholder .line-1 {
-            transform: rotate(45deg);
-        }
-
-        .product-image-placeholder .line-2 {
-            transform: rotate(-45deg);
-        }
-    </style>
+  <style>
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background-color: #F9FFD2;
+      color: #5A5A4D;
+      padding-top: 100px;
+    }
+  </style>
 </head>
 
 <body>
 
-    <nav class="navbar navbar-expand-md fixed-top" style="background-color: #006912;">
+  <nav class="navbar navbar-expand-md fixed-top" style="background-color: #006912;">
     <div class="container-fluid mt-2 px-5 py-3 d-flex align-items-center justify-content-between">
       <div class="AniBayan-text fw-bold fs-3" style="color: #FFFFFF; font-family: 'Montserrat', sans-serif;">
         AniBayan
@@ -150,39 +69,42 @@ $product_count = 2;
       </div>
     </div>
   </nav>
-  
-    <main class="container mt-5">
-        <h1 class="page-title mb-4">Find Supply Near You</h1>
 
-        <form class="row g-3 align-items-center mb-5 search-bar">
-            <div class="col">
-                <input type="search" class="form-control" placeholder="Search">
+  <div class="container mt-5">
+    <h1 class="fw-bold mb-4 text-center">Find Supply Near You</h1>
+
+    <form class="row g-3 align-items-center mb-5 justify-content-center">
+      <div class="col-10 col-md-6">
+        <input type="search" class="form-control" placeholder="Search">
+      </div>
+      <div class="col-auto">
+        <button type="submit" class="btn btn-success">Search</button>
+      </div>
+    </form>
+
+    <div class="row justify-content-center">
+      <div class="col-12 col-md-10 col-lg-8">
+        <?php for ($i = 0; $i < $product_count; $i++) { ?>
+          <div class="card mb-4 p-3 d-flex flex-row align-items-center"
+            style="background-color: #ffffff; border: none; border-radius: 15px; min-height: 130px;">
+            <div class="me-4">
+              <img src="../img/pic.png" alt="Product Image"
+                style="width: 100px; height: 100px; border-radius: 10px; object-fit: cover;">
             </div>
-            <div class="col-auto">
-                <button type="submit" class="btn">Search</button>
+            <div class="flex-grow-1">
+              <h5 class="fw-bold mb-2">Product Name:</h5>
+              <p class="mb-1">Farmer:</p>
+              <p class="mb-1">Location:</p>
+              <p class="mb-1">Price:</p>
+              <p class="mb-0">Contact:</p>
             </div>
-        </form>
+          </div>
+        <?php } ?>
+      </div>
+    </div>
+  </div>
 
-        <div class="product-list">
-            <?php for ($i = 0; $i < $product_count; $i++) : ?>
-                <div class="product-card">
-                    <div class="product-image-placeholder">
-                        <span class="line line-1"></span>
-                        <span class="line line-2"></span>
-                    </div>
-                    <div class="product-details">
-                        <h4>Product Name:</h4>
-                        <p>Farmer:</p>
-                        <p>Location:</p>
-                        <p>Price:</p>
-                        <p>Contact:</p>
-                    </div>
-                </div>
-            <?php endfor; ?>
-        </div>
-    </main>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
 
