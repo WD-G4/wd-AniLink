@@ -26,6 +26,16 @@ if (!isset($_SESSION["admin_logged_in"])) {
     .admin {
       background-color: #567119;
     }
+
+    .overlay-text {
+      top: 80%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: white;
+      font-size: 2rem;
+      font-weight: bold;
+      text-shadow: 2px 2px 6px #000;
+    }
   </style>
 </head>
 
