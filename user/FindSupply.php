@@ -91,28 +91,26 @@ $result = mysqli_query($conn, $query);
       </div>
     </form>
   </div>
-  
-  <div class="container mt-5">
+
     <div class="row justify-content-center">
-      <?php while ($row = mysqli_fetch_assoc($result)) { ?>
-        <div class="col-12 col-md-8 col-lg-4 mb-4">
-          <div class="card p-3 mb-4" style="background-color: #ffffff; border: none; border-radius: 10px; max-width: 500px; height: 355px;">
-            <div class="d-flex">
-              <img src="../img/<?php echo htmlspecialchars($row['imagePath']); ?>" alt="Product Image" style="width: 180px; height: 180px; border-radius: 5px; object-fit: cover; margin-right: 15px;">
-              <div class="d-flex align-items-center">
-                <p class="fw-bold mb-2">Product Name: <?php echo htmlspecialchars($row['productName']); ?></p>
-              </div>
+      <div class="col-12 col-md-10 col-lg-8">
+        <?php while ($row = mysqli_fetch_assoc($result)) { ?>
+          <div class="card mb-4 p-3 d-flex flex-row align-items-center"
+            style="background-color: #ffffff; border: none; border-radius: 15px; min-height: 130px;">
+            <div class="me-4">
+              <img src="../img/<?php echo htmlspecialchars($row['imagePath']); ?>" alt="Product Image"
+                style="width: 100px; height: 100px; border-radius: 10px; object-fit: cover;">
             </div>
-            <div class="mt-auto p-3">
-              <p class="fw-bold mb-2">Farmer: <?php echo htmlspecialchars($row['name']); ?></p>
-              <p class="fw-bold mb-2">Location: <?php echo htmlspecialchars($row['address']); ?></p>
-              <p class="fw-bold mb-2">Price: ₱<?php echo number_format($row['productPricePerKilo'], 2); ?></p>
+            <div class="flex-grow-1">
+              <h5 class="fw-bold mb-2">Product Name: <?php echo htmlspecialchars($row['productName']); ?></h5>
+              <p class="mb-1">Farmer: <?php echo htmlspecialchars($row['name']); ?></p>
+              <p class="mb-1">Location: <?php echo htmlspecialchars($row['address']); ?></p>
+              <p class="mb-1">Price: ₱<?php echo number_format($row['productPricePerKilo'], 2); ?></p>
             </div>
           </div>
-        </div>
-      <?php } ?>
+        <?php } ?>
+      </div>
     </div>
-  </div>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
