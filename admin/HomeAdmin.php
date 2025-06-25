@@ -47,7 +47,7 @@ if (!isset($_SESSION["admin_logged_in"])) {
             <a href="FarmerList.php" class="nav-link fw-bold text-uppercase" style="color: #FFFFFF;">Farmer List</a>
           </li>
           <li class="nav-item ms-3">
-            <a href="#" class="nav-link fw-bold text-uppercase" style="color: #FFFFFF;">Product List</a>
+            <a href="ProductList.php" class="nav-link fw-bold text-uppercase" style="color: #FFFFFF;">Product List</a>
           </li>
           <li class="nav-item ms-3">
             <a href="../logout.php" class="btn btn-success fw-bold text-uppercase" style="color: #FFFFFF;">Logout</a>
