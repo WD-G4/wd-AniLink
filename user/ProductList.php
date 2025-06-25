@@ -1,7 +1,14 @@
 <?php
 include('../connect.php');
 
+$search = isset($_GET['search']) ? mysqli_real_escape_string($conn, $_GET['search']) : '';
+
 $query = "SELECT farmers.name, farmers.address, product.productName, product.productPricePerKilo, product.imagePath FROM product JOIN farmers ON product.farmerId = farmers.id";
+
+if (!empty($search)) {
+  $query .= " WHERE product.productName LIKE '%$search%' OR farmers.name LIKE '%$search%' OR farmers.address LIKE '%$search%'";
+}
+
 $result = executeQuery($query);
 ?>
 
@@ -73,9 +80,9 @@ $result = executeQuery($query);
     </nav>
 
     <div class="container mt-5">
-        <form class="row g-3 align-items-center mb-5 justify-content-center">
+        <form method="GET" class="row g-3 align-items-center mb-5 justify-content-center">
             <div class="col-10 col-md-6">
-                <input type="search" class="form-control" placeholder="Search">
+                <input type="search" class="form-control" name="search" placeholder="Search" value="<?php echo isset($_GET['search']) ? htmlspecialchars($_GET['search']) : ''; ?>">
             </div>
             <div class="col-auto">
                 <button type="submit" class="btn btn-success">Search</button>
