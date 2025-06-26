@@ -33,7 +33,7 @@ $result = executeQuery($query);
 
 <body>
 
-    <nav class="navbar navbar-expand-md fixed-top" style="background-color: #006912;">
+    <nav class="navbar navbar-expand-md fixed-top shadow" style="background-color: #006912;">
         <div class="container-fluid mt-2 px-5 py-3 d-flex align-items-center justify-content-between">
             <div class="AniBayan-text fw-bold fs-3" style="color: #FFFFFF; font-family: 'Montserrat', sans-serif;">
                 AniBayan
