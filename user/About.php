@@ -21,15 +21,15 @@
 
     .fade-in {
         opacity: 0;
-        animation: fadeIn ease 1s forwards;
-        animation-delay: 0.3s;
+        animation: fadeIn ease 0.8s forwards;
+        animation-delay: 0.8s;
     }
 
     .slide-up {
         opacity: 0;
         transform: translateY(30px);
         animation: slideUp ease 1s forwards;
-        animation-delay: 0.3s;
+        animation-delay: 0.8s;
     }
 
     @keyframes fadeIn {
@@ -91,9 +91,8 @@
                     <div class="mb-5 fade-in">
                         <h1 class="display-8 fw-bold text-muted">What is AniBayan?</h1>
                         <p class="lead text-secondary" style="max-width: 45ch; font-size: 1.1rem;">
-                           AniBayan comes from the Filipino words "Ani", meaning harvest, and "Bayan", meaning community. It connects local farmers to the community by allowing users to browse farmer profiles and check available products with their prices. Whether you're a farmer looking to share your harvest or a buyer seeking fresh local produce — AniBayan is your community harvest hub.
-
-</p>
+                            AniBayan comes from the Filipino words "Ani", meaning harvest, and "Bayan", meaning community. It connects local farmers to the community by allowing users to browse farmer profiles and check available products with their prices. Whether you're a farmer looking to share your harvest or a buyer seeking fresh local produce — AniBayan is your community harvest hub.
+                        </p>
                     </div>
                     <div class="slide-up">
                         <h2 class="display-7 fw-bold text-muted">Why Support Local Farmers</h2>

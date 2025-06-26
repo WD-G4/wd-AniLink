@@ -29,6 +29,25 @@ $result = executeQuery($query);
         background-color: #F9FFD2;
         padding-top: 100px;
     }
+     .product-card {
+    background-color: #ffffff;
+    border: none;
+    border-radius: 10px;
+    max-width: 500px;
+    height: 355px;
+    padding: 1rem;
+    transition: transform 0.3s ease;
+    animation: fadeInUp 0.8s ease forwards;
+    opacity: 0;
+    transform: translateY(30px);
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
 </style>
 
 <body>
@@ -89,7 +108,7 @@ $result = executeQuery($query);
         <div class="row justify-content-center">
             <?php while ($row = mysqli_fetch_assoc($result)) { ?>
                 <div class="col-12 col-md-8 col-lg-4 mb-4">
-                    <div class="card p-3 mb-4" style="background-color: #ffffff; border: none; border-radius: 10px; max-width: 500px; height: 355px;">
+                    <div class="product-card p-3 mb-4" style="background-color: #ffffff; border: none; border-radius: 10px; max-width: 500px; height: 355px;">
                         <div class="d-flex">
                             <img src="../img/<?php echo htmlspecialchars($row['imagePath']); ?>" alt="Product Image" style="width: 180px; height: 180px; border-radius: 5px; object-fit: cover; margin-right: 15px;">
                             <div class="d-flex align-items-center">
