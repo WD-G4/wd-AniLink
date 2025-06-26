@@ -1,31 +1,20 @@
-<?php
-$pageTitle = "AniBayan - About Us";
-$platformDescription = "AniLinks is a platform that connects farmers to real-time data, students to hands-on learning and communities to actionable insights.";
-$platformlocal = "Supporting local farmers is essential to strengthening the Filipino economy, protecting the environment, and ensuring fresh, nutritious food for every family."
-
-$imageAltText = "A vibrant rice field in the Philippines at dawn.";
-
-?>
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title><?php echo htmlspecialchars($pageTitle); ?></title>
-
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet" />
+    <title>AniBayan - About Us</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
 
 
 </head>
 
-<body class="bg-white text-dark" style="padding-top: 120px;">
+<body style="background-color: #F9FFD2; padding-top: 120px;">
 
-    <nav class="navbar navbar-expand-md fixed-top shadow" style="background-color: #006912;">
+    <nav class="navbar navbar-expand-md fixed-top" style="background-color: #006912;">
         <div class="container-fluid mt-2 px-5 py-3 d-flex align-items-center justify-content-between">
             <div class="AniBayan-text fw-bold fs-3" style="color: #FFFFFF; font-family: 'Montserrat', sans-serif;">
                 AniBayan
@@ -55,11 +44,15 @@ $imageAltText = "A vibrant rice field in the Philippines at dawn.";
                             Products List
                         </a>
                     </li>
+                    <li class="nav-item">
+                        <a href="FindSupply.php" class="nav-link fw-bold text-uppercase mt-2 mx-2 px-md-3 px-2 py-md-2 py-1" style="color: #FFFFFF;">
+                            Find Supply
+                        </a>
+                    </li>
                 </ul>
             </div>
         </div>
     </nav>
-
 
 
     <main class="container my-5 py-md-4">
@@ -69,13 +62,13 @@ $imageAltText = "A vibrant rice field in the Philippines at dawn.";
                     <div class="mb-5">
                         <h1 id="intro-heading" class="display-6 fw-bold" style="color: #70705a;">What is AniBayan?</h1>
                         <p class="lead text-secondary" style="max-width: 45ch; font-size: 1.1rem; line-height: 1.6;">
-                            <?php echo htmlspecialchars($platformDescription); ?>
+                            AniLinks is a platform that connects farmers to real-time data, students to hands-on learning and communities to actionable insights.
                         </p>
                     </div>
                     <div>
                         <h2 class="display-6 fw-bold" style="color: #70705a;">Why Support Local Farmers</h2>
                         <p class="text-secondary" style="max-width: 45ch; font-size: 1.1rem; line-height: 1.6;">
-                            <?php echo htmlspecialchars($platformDescription); ?>
+                            AniLinks is a platform that connects farmers to real-time data, students to hands-on learning and communities to actionable insights.
                         </p>
                     </div>
                 </div>
@@ -112,7 +105,6 @@ $imageAltText = "A vibrant rice field in the Philippines at dawn.";
                     </div>
                 </div>
         </section>
-
 
         <section aria-labelledby="mission-heading" class="mt-5 pt-md-4">
             <div class="row justify-content-center">
