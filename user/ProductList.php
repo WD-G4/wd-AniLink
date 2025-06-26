@@ -6,7 +6,7 @@ $search = isset($_GET['search']) ? mysqli_real_escape_string($conn, $_GET['searc
 $query = "SELECT farmers.name, farmers.address, product.productName, product.productPricePerKilo, product.imagePath FROM product JOIN farmers ON product.farmerId = farmers.id";
 
 if (!empty($search)) {
-  $query .= " WHERE product.productName LIKE '%$search%' OR farmers.name LIKE '%$search%' OR farmers.address LIKE '%$search%'";
+    $query .= " WHERE product.productName LIKE '%$search%' OR farmers.name LIKE '%$search%' OR farmers.address LIKE '%$search%'";
 }
 
 $result = executeQuery($query);
@@ -30,33 +30,37 @@ $result = executeQuery($query);
         background-color: #F9FFD2;
         padding-top: 100px;
     }
-     .product-card {
-    background-color: #ffffff;
-    border: none;
-    border-radius: 10px;
-    max-width: 500px;
-    height: 355px;
-    padding: 1rem;
-    transition: transform 0.3s ease;
-    animation: fadeInUp 0.8s ease forwards;
-    opacity: 0;
-    transform: translateY(30px);
-}
 
-@keyframes fadeInUp {
-    to {
-        opacity: 1;
-        transform: translateY(0);
+    .product-card {
+        background-color: #ffffff;
+        border: none;
+        border-radius: 10px;
+        max-width: 500px;
+        height: 355px;
+        padding: 1rem;
+        transition: transform 0.3s ease;
+        animation: fadeInUp 0.8s ease forwards;
+        opacity: 0;
+        transform: translateY(30px);
     }
-}
+
+    @keyframes fadeInUp {
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
 </style>
 
 <body>
 
     <nav class="navbar navbar-expand-md fixed-top shadow" style="background-color: #006912;">
         <div class="container-fluid mt-2 px-5 py-3 d-flex align-items-center justify-content-between">
-            <div class="AniBayan-text fw-bold fs-3" style="color: #FFFFFF; font-family: 'Montserrat', sans-serif;">
-                AniBayan
+            <div class="d-flex align-items-center" style="height: 60px; overflow: hidden;">
+                <img src="../img/anilinklogo.png" alt="AniBayan Logo" style="height: 90px; margin-right: 12px; object-fit: contain;">
+                <div class="AniBayan-text fw-bold fs-3" style="color: #FFFFFF; font-family: 'Montserrat', sans-serif;">
+                    AniBayan
+                </div>
             </div>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu"
                 aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation">

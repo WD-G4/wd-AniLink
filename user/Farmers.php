@@ -94,40 +94,43 @@ $result = executeQuery($query);
 
 <body style="padding-top: 100px; background-color: #F9FFD2; font-family: 'Montserrat', sans-serif; color: #5A5A4D;">
 
-    <nav class="navbar navbar-expand-md fixed-top shadow" style="background-color: #006912;">
-        <div class="container-fluid mt-2 px-5 py-3 d-flex align-items-center justify-content-between">
-            <div class="AniBayan-text fw-bold fs-3" style="color: #FFFFFF; font-family: 'Montserrat', sans-serif;">
-                AniBayan
-            </div>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse justify-content-end" id="navMenu">
-                <ul class="navbar-nav d-flex align-items-md-center" style="font-family: 'Montserrat', sans-serif;">
-                    <li class="nav-item">
-                        <a href="Home.php" class="nav-link fw-bold text-uppercase mt-2 mx-2 px-md-3 px-2 py-md-2 py-1" style="color: #FFFFFF;">
-                            Home
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="About.php" class="nav-link fw-bold text-uppercase mt-2 mx-2 px-md-3 px-2 py-md-2 py-1" style="color: #FFFFFF; ">
-                            About
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="Farmers.php" class="nav-link active fw-bold text-uppercase mt-2 mx-2 px-md-3 px-2 py-md-2 py-1" style="color: #FFFFFF; border-bottom: 3px solid #EFDE92;">
-                            Farmers
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="ProductList.php" class="nav-link fw-bold text-uppercase mt-2 mx-2 px-md-3 px-2 py-md-2 py-1" style="color: #FFFFFF;">
-                            Products List
-                        </a>
-                    </li>
-                </ul>
-            </div>
+  <nav class="navbar navbar-expand-md fixed-top shadow" style="background-color: #006912;">
+    <div class="container-fluid mt-2 px-5 py-3 d-flex align-items-center justify-content-between">
+      <div class="d-flex align-items-center" style="height: 60px; overflow: hidden;">
+        <img src="../img/anilinklogo.png" alt="AniBayan Logo" style="height: 90px; margin-right: 12px; object-fit: contain;">
+        <div class="AniBayan-text fw-bold fs-3" style="color: #FFFFFF; font-family: 'Montserrat', sans-serif;">
+          AniBayan
         </div>
-    </nav>
+      </div>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navMenu">
+        <ul class="navbar-nav d-flex align-items-md-center" style="font-family: 'Montserrat', sans-serif;">
+          <li class="nav-item">
+            <a href="Home.php" class="nav-link fw-bold text-uppercase mt-2 mx-2 px-md-3 px-2 py-md-2 py-1" style="color: #FFFFFF;">
+              Home
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="About.php" class="nav-link fw-bold text-uppercase mt-2 mx-2 px-md-3 px-2 py-md-2 py-1" style="color: #FFFFFF; ">
+              About
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="Farmers.php" class="nav-link active fw-bold text-uppercase mt-2 mx-2 px-md-3 px-2 py-md-2 py-1" style="color: #FFFFFF; border-bottom: 3px solid #EFDE92;">
+              Farmers
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="ProductList.php" class="nav-link fw-bold text-uppercase mt-2 mx-2 px-md-3 px-2 py-md-2 py-1" style="color: #FFFFFF;">
+              Products List
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
 
   <div class="container">
     <h1 class="title">MEET OUR LOCAL FARMERS</h1>

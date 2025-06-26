@@ -42,8 +42,11 @@
 
   <nav class="navbar navbar-expand-md fixed-top shadow" style="background-color: #006912;">
     <div class="container-fluid mt-2 px-5 py-3 d-flex align-items-center justify-content-between">
-      <div class="AniBayan-text fw-bold fs-3" style="color: #FFFFFF; font-family: 'Montserrat', sans-serif;">
-        AniBayan
+      <div class="d-flex align-items-center" style="height: 60px; overflow: hidden;">
+        <img src="../img/anilinklogo.png" alt="AniBayan Logo" style="height: 90px; margin-right: 12px; object-fit: contain;">
+        <div class="AniBayan-text fw-bold fs-3" style="color: #FFFFFF; font-family: 'Montserrat', sans-serif;">
+          AniBayan
+        </div>
       </div>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu"
         aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation">

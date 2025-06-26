@@ -38,9 +38,14 @@ $totalProducts = mysqli_fetch_assoc(executeQuery($query2))['total'];
 
   <nav class="navbar navbar-expand-md fixed-top shadow-lg" style="background-color: #006912;">
     <div class="container-fluid mt-2 px-5 py-3 d-flex align-items-center justify-content-between">
-      <div class="fw-bold fs-3" style="color: #FFFFFF; font-family: 'Montserrat', sans-serif;">AniBayan
+      <div class="d-flex align-items-center" style="height: 60px; overflow: hidden;">
+        <img src="../img/anilinklogo.png" alt="AniBayan Logo" style="height: 90px; margin-right: 12px; object-fit: contain;">
+        <div class="fw-bold fs-3" style="color: #FFFFFF; font-family: 'Montserrat', sans-serif;">
+          AniBayan
+        </div>
         <button type="button" class="btn btn-light fw-bold ms-3" style="border-radius: 50%; font-size: 14px;">Admin</button>
       </div>
+
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
         <span class="navbar-toggler-icon"></span>
       </button>
