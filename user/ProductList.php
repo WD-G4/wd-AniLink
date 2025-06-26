@@ -93,7 +93,7 @@ $result = executeQuery($query);
                         <div class="d-flex">
                             <img src="../img/<?php echo htmlspecialchars($row['imagePath']); ?>" alt="Product Image" style="width: 180px; height: 180px; border-radius: 5px; object-fit: cover; margin-right: 15px;">
                             <div class="d-flex align-items-center">
-                                <p class="fw-bold mb-2">Product Name: <?php echo htmlspecialchars($row['productName']); ?></p>
+                                <p class="fw-bold mb-2"><?php echo htmlspecialchars($row['productName']); ?></p>
                             </div>
                         </div>
                         <div class="mt-auto p-3">
