@@ -91,8 +91,9 @@
                     <div class="mb-5 fade-in">
                         <h1 class="display-8 fw-bold text-muted">What is AniBayan?</h1>
                         <p class="lead text-secondary" style="max-width: 45ch; font-size: 1.1rem;">
-                            AniLinks is a platform that connects farmers to real-time data, students to hands-on learning and communities to actionable insights.
-                        </p>
+                           AniBayan comes from the Filipino words "Ani", meaning harvest, and "Bayan", meaning community. It connects local farmers to the community by allowing users to browse farmer profiles and check available products with their prices. Whether you're a farmer looking to share your harvest or a buyer seeking fresh local produce — AniBayan is your community harvest hub.
+
+</p>
                     </div>
                     <div class="slide-up">
                         <h2 class="display-7 fw-bold text-muted">Why Support Local Farmers</h2>
