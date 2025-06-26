@@ -34,10 +34,7 @@ if (!isset($_SESSION["admin_logged_in"])) {
                         <a href="HomeAdmin.php" class="nav-link fw-bold text-uppercase" style="color: #FFFFFF;">Dashboard</a>
                     </li>
                     <li class="nav-item ms-3">
-                        <a href="#" class="nav-link fw-bold text-uppercase" style="color: #FFFFFF; border-bottom: 3px solid #EFDE92;">Farmer List</a>
-                    </li>
-                    <li class="nav-item ms-3">
-                        <a href="ProductList.php" class="nav-link fw-bold text-uppercase" style="color: #FFFFFF;">Product List</a>
+                        <a href="#" class="nav-link fw-bold text-uppercase" style="color: #FFFFFF; border-bottom: 3px solid #EFDE92;">Farmers</a>
                     </li>
                     <li class="nav-item ms-3">
                         <a href="../logout.php" class="btn btn-success fw-bold text-uppercase" style="color: #FFFFFF;">Logout</a>
@@ -68,7 +65,7 @@ if (!isset($_SESSION["admin_logged_in"])) {
                                 <th scope="col">Farmer ID</th>
                                 <th scope="col">Farmer</th>
                                 <th scope="col">Location</th>
-                                <th scope="col">Total Products</th>
+                                <th scope="col">Products</th>
                             </tr>
                         </thead>
                         <tbody class="table-group-divider" style="color: #006912;">
