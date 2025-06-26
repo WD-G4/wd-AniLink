@@ -5,7 +5,6 @@ $platformlocal = "Supporting local farmers is essential to strengthening the Fil
 
 $imageAltText = "A vibrant rice field in the Philippines at dawn.";
 
-$imageExists = file_exists($imagePath);
 ?>
 <!DOCTYPE html>
 <html lang="en">
