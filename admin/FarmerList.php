@@ -4,6 +4,13 @@ if (!isset($_SESSION["admin_logged_in"])) {
     header("Location: ../index.php");
     exit();
 }
+include('../connect.php');
+$search = isset($_GET['search']) ? mysqli_real_escape_string($conn, $_GET['search']) : '';
+$query = "SELECT farmers.id, farmers.name, farmers.address, product.productName FROM farmers JOIN product ON farmers.productId = product.id";
+if (!empty($search)) {
+    $query .= " WHERE product.productName LIKE '%$search%' OR farmers.name LIKE '%$search%' OR farmers.address LIKE '%$search%'";
+}
+$result = executeQuery($query);
 ?>
 <!doctype html>
 <html lang="en">
@@ -45,15 +52,20 @@ if (!isset($_SESSION["admin_logged_in"])) {
     </nav>
 
     <div class="container pt-2" style="margin-top: 130px;">
-        <div class="d-flex flex-wrap justify-content-center mb-4">
-            <input type="text" class="form-control text-center me-2"
-                placeholder="Search Farmer..."
-                style="width: 50%; min-width: 250px; max-width: 600px; height: 50px; background-color: #EBEFA6; border: none; border-radius: 8px; font-size: 16px; color: #014B0E;">
-            <button type="submit" class="btn fw-bold"
-                style="background-color: #EBEFA6; color: #014B0E; min-width: 120px; max-width: 180px; height: 50px; border: none; border-radius: 8px; font-size: 15px; flex-grow: 0;">
-                Search
-            </button>
-        </div>
+        <form method="GET" class="d-flex flex-wrap justify-content-center align-items-center gap-2 mb-4">
+            <div class="col-10 col-md-6">
+                <input type="search" class="form-control text-center" name="search"
+                    placeholder="Search Farmer..."
+                    value="<?php echo isset($_GET['search']) ? htmlspecialchars($_GET['search']) : ''; ?>"
+                    style="width: 100%; min-width: 250px; height: 50px; background-color: #EBEFA6; border: none; border-radius: 8px; font-size: 16px; color: #014B0E;">
+            </div>
+            <div class="col-auto">
+                <button type="submit" class="btn fw-bold"
+                    style="background-color: #EBEFA6; color: #014B0E; min-width: 120px; max-width: 180px; height: 50px; border: none; border-radius: 8px; font-size: 15px;">
+                    Search
+                </button>
+            </div>
+        </form>
     </div>
     <div class="container-fluid">
         <div class="container py-4">
@@ -69,6 +81,14 @@ if (!isset($_SESSION["admin_logged_in"])) {
                             </tr>
                         </thead>
                         <tbody class="table-group-divider" style="color: #006912;">
+                            <?php while ($row = $result->fetch_assoc()) { ?>
+                                <tr>
+                                    <td><?php echo htmlspecialchars($row['id']); ?></td>
+                                    <td><?php echo htmlspecialchars($row['name']); ?></td>
+                                    <td><?php echo htmlspecialchars($row['address']); ?></td>
+                                    <td><?php echo htmlspecialchars($row['productName'] ?? 'None'); ?></td>
+                                </tr>
+                            <?php } ?>
                         </tbody>
                     </table>
                 </div>
@@ -76,7 +96,6 @@ if (!isset($_SESSION["admin_logged_in"])) {
         </div>
     </div>
     
-
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
