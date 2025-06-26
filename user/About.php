@@ -101,23 +101,23 @@
                 </div>
         </section>
 
-        <section aria-labelledby="mission-heading" class="mt-5 pt-md-4">
-            <div class="row justify-content-center">
-                <div class="col-lg-10 col-xl-8">
-                    <h2 id="mission-heading" class="display-6 fw-bold" style="color: #70705a;">OUR MISSION & VISION</h2>
-                    <div class="mt-4">
-                        <p class="text-secondary" style="line-height: 1.7;">
-                            <strong>Mission:</strong> To empower Filipino farmers by providing them with innovative technology and data-driven insights. We aim to create a sustainable agricultural ecosystem that fosters direct connections between producers and consumers, inspires hands-on learning for students, and strengthens community food security.
-                        </p>
-                        <p class="mt-4 text-secondary" style="line-height: 1.7;">
-                            <strong>Vision:</strong> We envision a future where every Filipino farmer is prosperous, food secure, and digitally connected, leading a revitalized agricultural sector that serves as the backbone of the nation's economy and well-being.
-                        </p>
-                    </div>
-                </div>
+       <section aria-labelledby="mission-heading" class="mt-5 pt-md-4">
+    <div class="row"> 
+        <div class="col-lg-10 col-xl-8">
+            <h2 id="mission-heading" class="display-6 fw-bold" style="color: #70705a;">OUR MISSION & VISION</h2>
+            <div class="mt-4">
+                <p class="text-secondary" style="line-height: 1.7;">
+                    <strong>Mission:</strong> To empower Filipino farmers by providing them with innovative technology and data-driven insights. We aim to create a sustainable agricultural ecosystem that fosters direct connections between producers and consumers, inspires hands-on learning for students, and strengthens community food security.
+                </p>
+                <p class="mt-4 text-secondary" style="line-height: 1.7;">
+                    <strong>Vision:</strong> We envision a future where every Filipino farmer is prosperous, food secure, and digitally connected, leading a revitalized agricultural sector that serves as the backbone of the nation's economy and well-being.
+                </p>
             </div>
-        </section>
+        </div>
+    </div>
+</section>
     </main>
-
+    
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
