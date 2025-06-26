@@ -44,11 +44,6 @@
                             Products List
                         </a>
                     </li>
-                    <li class="nav-item">
-                        <a href="FindSupply.php" class="nav-link fw-bold text-uppercase mt-2 mx-2 px-md-3 px-2 py-md-2 py-1" style="color: #FFFFFF;">
-                            Find Supply
-                        </a>
-                    </li>
                 </ul>
             </div>
         </div>
