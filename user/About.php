@@ -68,7 +68,7 @@
                     <div>
                         <h2 class="display-6 fw-bold" style="color: #70705a;">Why Support Local Farmers</h2>
                         <p class="text-secondary" style="max-width: 45ch; font-size: 1.1rem; line-height: 1.6;">
-                            AniLinks is a platform that connects farmers to real-time data, students to hands-on learning and communities to actionable insights.
+                            Supporting local farmers is essential to strengthening the Filipino economy, protecting the environment, and ensuring fresh, nutritious food for every family.
                         </p>
                     </div>
                 </div>
