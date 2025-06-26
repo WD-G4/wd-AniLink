@@ -21,15 +21,15 @@
 
     .fade-in {
         opacity: 0;
-        animation: fadeIn ease 0.8s forwards;
-        animation-delay: 0.8s;
+        animation: fadeIn ease 1s forwards;
+        animation-delay: 0.5s;
     }
 
     .slide-up {
         opacity: 0;
         transform: translateY(30px);
         animation: slideUp ease 1s forwards;
-        animation-delay: 0.8s;
+        animation-delay: 0.5s;
     }
 
     @keyframes fadeIn {
