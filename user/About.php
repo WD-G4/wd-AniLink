@@ -118,6 +118,32 @@
 </section>
     </main>
     
+    <footer style="background-color: #000000; color: white;" class="py-1 mt-5">
+    <div class="container">
+        <div class="row text-center">
+
+            <div class="col-md-4 mb-3 mb-md-0">
+                <i class="bi bi-lightbulb" style="font-size: 2rem; color: #EFDE92;"></i>
+                <p class="fw-bold mt-1 mb-0" style="font-family: 'Montserrat', sans-serif;">Educate</p>
+                <p class="mb-0 small" style="color: #cccccc;">Teach, Inform, Enlighten, Guide</p>
+            </div>
+
+            <div class="col-md-4 mb-3 mb-md-0">
+                <i class="bi bi-diagram-3" style="font-size: 2rem; color: #EFDE92;"></i>
+                <p class="fw-bold mt-1 mb-0" style="font-family: 'Montserrat', sans-serif;">Enable</p>
+                <p class="mb-0 small" style="color: #cccccc;">Empower, Support, Facilitate, Strengthen</p>
+            </div>
+
+            <div class="col-md-4">
+                <i class="bi bi-people-fill" style="font-size: 2rem; color: #EFDE92;"></i>
+                <p class="fw-bold mt-1 mb-0" style="font-family: 'Montserrat', sans-serif;">Connect</p>
+                <p class="mb-0 small" style="color: #cccccc;">Unite, Link, Bridge, Engage</p>
+            </div>
+
+        </div>
+    </div>
+</footer>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
