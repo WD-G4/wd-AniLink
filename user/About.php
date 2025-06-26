@@ -55,13 +55,13 @@
             <div class="row align-items-center justify-content-center gy-5">
                 <div class="col-md-6">
                     <div class="mb-5">
-                        <h1 id="intro-heading" class="display-6 fw-bold" style="color: #70705a;">What is AniBayan?</h1>
+                        <h1 id="intro-heading" class="display-8 fw-bold" style="color: #70705a;">What is AniBayan?</h1>
                         <p class="lead text-secondary" style="max-width: 45ch; font-size: 1.1rem; line-height: 1.6;">
                             AniLinks is a platform that connects farmers to real-time data, students to hands-on learning and communities to actionable insights.
                         </p>
                     </div>
                     <div>
-                        <h2 class="display-6 fw-bold" style="color: #70705a;">Why Support Local Farmers</h2>
+                        <h2 class="display-7 fw-bold" style="color: #70705a;">Why Support Local Farmers</h2>
                         <p class="text-secondary" style="max-width: 45ch; font-size: 1.1rem; line-height: 1.6;">
                             Supporting local farmers is essential to strengthening the Filipino economy, protecting the environment, and ensuring fresh, nutritious food for every family.
                         </p>
@@ -101,10 +101,10 @@
                 </div>
         </section>
 
-       <section aria-labelledby="mission-heading" class="mt-5 pt-md-4">
+<section aria-labelledby="mission-heading">
     <div class="row"> 
         <div class="col-lg-10 col-xl-8">
-            <h2 id="mission-heading" class="display-6 fw-bold" style="color: #70705a;">OUR MISSION & VISION</h2>
+            <h2 id="mission-heading" class="display-8 fw-bold" style="color: #70705a;">OUR MISSION & VISION</h2>
             <div class="mt-4">
                 <p class="text-secondary" style="line-height: 1.7;">
                     <strong>Mission:</strong> To empower Filipino farmers by providing them with innovative technology and data-driven insights. We aim to create a sustainable agricultural ecosystem that fosters direct connections between producers and consumers, inspires hands-on learning for students, and strengthens community food security.
