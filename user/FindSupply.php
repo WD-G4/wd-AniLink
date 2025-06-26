@@ -102,7 +102,6 @@ $result = mysqli_query($conn, $query);
                 style="width: 100px; height: 100px; border-radius: 10px; object-fit: cover;">
             </div>
             <div class="flex-grow-1">
-              <h5 class="fw-bold mb-2"><?php echo htmlspecialchars($row['productName']); ?></h5>
               <p class="mb-1">Farmer: <?php echo htmlspecialchars($row['name']); ?></p>
               <p class="mb-1">Location: <?php echo htmlspecialchars($row['address']); ?></p>
               <p class="mb-1">Price: ₱<?php echo number_format($row['productPricePerKilo'], 2); ?></p>
