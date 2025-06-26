@@ -78,6 +78,9 @@
               Products List
             </a>
           </li>
+          <li class="nav-item ms-3">
+            <a href="../logout.php" class="btn btn-success fw-bold text-uppercase" style="color: #FFFFFF;">Logout</a>
+          </li>
         </ul>
       </div>
     </div>
