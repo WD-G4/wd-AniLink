@@ -12,6 +12,40 @@
 
 </head>
 
+<style>
+    body {
+        background-color: #F9FFD2;
+        padding-top: 120px;
+        font-family: 'Montserrat', sans-serif;
+    }
+
+    .fade-in {
+        opacity: 0;
+        animation: fadeIn ease 1s forwards;
+        animation-delay: 0.3s;
+    }
+
+    .slide-up {
+        opacity: 0;
+        transform: translateY(30px);
+        animation: slideUp ease 1s forwards;
+        animation-delay: 0.3s;
+    }
+
+    @keyframes fadeIn {
+        to {
+            opacity: 1;
+        }
+    }
+
+    @keyframes slideUp {
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+</style>
+
 <body style="background-color: #F9FFD2; padding-top: 120px;">
 
     <nav class="navbar navbar-expand-md fixed-top" style="background-color: #006912;">
@@ -51,23 +85,23 @@
 
 
     <main class="container my-5 py-md-4">
-        <section aria-labelledby="intro-heading" class="mb-5 pb-md-4">
+        <section class="mb-5 pb-md-4">
             <div class="row align-items-center justify-content-center gy-5">
                 <div class="col-md-6">
-                    <div class="mb-5">
-                        <h1 id="intro-heading" class="display-8 fw-bold" style="color: #70705a;">What is AniBayan?</h1>
-                        <p class="lead text-secondary" style="max-width: 45ch; font-size: 1.1rem; line-height: 1.6;">
+                    <div class="mb-5 fade-in">
+                        <h1 class="display-8 fw-bold text-muted">What is AniBayan?</h1>
+                        <p class="lead text-secondary" style="max-width: 45ch; font-size: 1.1rem;">
                             AniLinks is a platform that connects farmers to real-time data, students to hands-on learning and communities to actionable insights.
                         </p>
                     </div>
-                    <div>
-                        <h2 class="display-7 fw-bold" style="color: #70705a;">Why Support Local Farmers</h2>
-                        <p class="text-secondary" style="max-width: 45ch; font-size: 1.1rem; line-height: 1.6;">
+                    <div class="slide-up">
+                        <h2 class="display-7 fw-bold text-muted">Why Support Local Farmers</h2>
+                        <p class="text-secondary" style="max-width: 45ch; font-size: 1.1rem;">
                             Supporting local farmers is essential to strengthening the Filipino economy, protecting the environment, and ensuring fresh, nutritious food for every family.
                         </p>
                     </div>
                 </div>
-                <div class="col-md-6">
+                <div class="col-md-6 slide-up">
                     <div id="aboutCarousel" class="carousel slide rounded overflow-hidden" data-bs-ride="carousel" data-bs-interval="3000">
                         <div class="carousel-inner">
                             <div class="carousel-item active">
@@ -99,50 +133,48 @@
                         </button>
                     </div>
                 </div>
+            </div>
         </section>
 
-<section aria-labelledby="mission-heading">
-    <div class="row"> 
-        <div class="col-lg-10 col-xl-8">
-            <h2 id="mission-heading" class="display-8 fw-bold" style="color: #70705a;">OUR MISSION & VISION</h2>
-            <div class="mt-4">
-                <p class="text-secondary" style="line-height: 1.7;">
-                    <strong>Mission:</strong> To empower Filipino farmers by providing them with innovative technology and data-driven insights. We aim to create a sustainable agricultural ecosystem that fosters direct connections between producers and consumers, inspires hands-on learning for students, and strengthens community food security.
-                </p>
-                <p class="mt-4 text-secondary" style="line-height: 1.7;">
-                    <strong>Vision:</strong> We envision a future where every Filipino farmer is prosperous, food secure, and digitally connected, leading a revitalized agricultural sector that serves as the backbone of the nation's economy and well-being.
-                </p>
+        <section class="slide-up">
+            <div class="row">
+                <div class="col-lg-10 col-xl-8">
+                    <h2 class="display-8 fw-bold text-muted">OUR MISSION & VISION</h2>
+                    <div class="mt-4">
+                        <p class="text-secondary">
+                            <strong>Mission:</strong> To empower Filipino farmers by providing them with innovative technology and data-driven insights. We aim to create a sustainable agricultural ecosystem that fosters direct connections between producers and consumers, inspires hands-on learning for students, and strengthens community food security.
+                        </p>
+                        <p class="mt-4 text-secondary">
+                            <strong>Vision:</strong> We envision a future where every Filipino farmer is prosperous, food secure, and digitally connected, leading a revitalized agricultural sector that serves as the backbone of the nation's economy and well-being.
+                        </p>
+                    </div>
+                </div>
             </div>
-        </div>
-    </div>
-</section>
+        </section>
     </main>
-    
-    <footer style="background-color: #000000; color: white;" class="py-1 mt-5">
-    <div class="container">
-        <div class="row text-center">
 
-            <div class="col-md-4 mb-3 mb-md-0">
-                <i class="bi bi-lightbulb" style="font-size: 2rem; color: #EFDE92;"></i>
-                <p class="fw-bold mt-1 mb-0" style="font-family: 'Montserrat', sans-serif;">Educate</p>
-                <p class="mb-0 small" style="color: #cccccc;">Teach, Inform, Enlighten, Guide</p>
+    <footer style="background-color: #000000; color: white;" class="py-1 mt-5 fade-in">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-md-4 mb-3 mb-md-0">
+                    <i class="bi bi-lightbulb" style="font-size: 2rem; color: #EFDE92;"></i>
+                    <p class="fw-bold mt-1 mb-0">Educate</p>
+                    <p class="mb-0 small" style="color: #cccccc;">Teach, Inform, Enlighten, Guide</p>
+                </div>
+                <div class="col-md-4 mb-3 mb-md-0">
+                    <i class="bi bi-diagram-3" style="font-size: 2rem; color: #EFDE92;"></i>
+                    <p class="fw-bold mt-1 mb-0">Enable</p>
+                    <p class="mb-0 small" style="color: #cccccc;">Empower, Support, Facilitate, Strengthen</p>
+                </div>
+                <div class="col-md-4">
+                    <i class="bi bi-people-fill" style="font-size: 2rem; color: #EFDE92;"></i>
+                    <p class="fw-bold mt-1 mb-0">Connect</p>
+                    <p class="mb-0 small" style="color: #cccccc;">Unite, Link, Bridge, Engage</p>
+                </div>
             </div>
-
-            <div class="col-md-4 mb-3 mb-md-0">
-                <i class="bi bi-diagram-3" style="font-size: 2rem; color: #EFDE92;"></i>
-                <p class="fw-bold mt-1 mb-0" style="font-family: 'Montserrat', sans-serif;">Enable</p>
-                <p class="mb-0 small" style="color: #cccccc;">Empower, Support, Facilitate, Strengthen</p>
-            </div>
-
-            <div class="col-md-4">
-                <i class="bi bi-people-fill" style="font-size: 2rem; color: #EFDE92;"></i>
-                <p class="fw-bold mt-1 mb-0" style="font-family: 'Montserrat', sans-serif;">Connect</p>
-                <p class="mb-0 small" style="color: #cccccc;">Unite, Link, Bridge, Engage</p>
-            </div>
-
         </div>
-    </div>
-</footer>
+    </footer>
+
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
