@@ -10,6 +10,32 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
 
+  <style>
+    @keyframes fadeSlideUp {
+      0% {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .fade-in-up {
+      opacity: 0;
+      animation: fadeSlideUp 1s ease-out forwards;
+    }
+
+    .fade-delay-1 {
+      animation-delay: 0.3s;
+    }
+
+    .fade-delay-2 {
+      animation-delay: 0.6s;
+    }
+  </style>
 </head>
 
 <body>
@@ -59,18 +85,30 @@
     <div class="container position-relative z-1 d-flex align-items-center justify-content-center text-center" style="height:100vh;">
       <div class="row">
         <div class="col-12 p-3 text-center">
-          <h1 class="fw-bold mb-3 d-none d-lg-block"
-            style="text-transform:uppercase; letter-spacing:2px; color:#FFFFFF; font-size:80px;">AniBayan</h1>
-          <h1 class="fw-bold mb-3 d-none d-md-block d-lg-none"
-            style="text-transform:uppercase; letter-spacing:2px; color:#FFFFFF; font-size:60px;">AniBayan</h1>
-          <h1 class="fw-bold mb-3 d-block d-md-none"
-            style="text-transform:uppercase; letter-spacing:2px; color:#FFFFFF; font-size:45px;">AniBayan</h1>
-          <p class="mx-auto d-none d-lg-block"
-            style="max-width:700px; color:#FFFFFF; font-size:28px;">Support Local. Eat Fresh. Save More.</p>
-          <p class="mx-auto d-none d-md-block d-lg-none"
-            style="max-width:700px; color:#FFFFFF; font-size:22px;">Support Local. Eat Fresh. Save More.</p>
-          <p class="mx-auto d-block d-md-none"
-            style="max-width:700px; color:#FFFFFF; font-size:18px;">Support Local. Eat Fresh. Save More.</p>
+          <h1 class="fw-bold mb-3 d-none d-lg-block fade-in-up"
+            style="text-transform:uppercase; letter-spacing:2px; color:#FFFFFF; font-size:80px;">
+            AniBayan
+          </h1>
+          <h1 class="fw-bold mb-3 d-none d-md-block d-lg-none fade-in-up"
+            style="text-transform:uppercase; letter-spacing:2px; color:#FFFFFF; font-size:60px;">
+            AniBayan
+          </h1>
+          <h1 class="fw-bold mb-3 d-block d-md-none fade-in-up"
+            style="text-transform:uppercase; letter-spacing:2px; color:#FFFFFF; font-size:45px;">
+            AniBayan
+          </h1>
+          <p class="mx-auto d-none d-lg-block fade-in-up fade-delay-1"
+            style="max-width:700px; color:#FFFFFF; font-size:28px;">
+            Support Local. Eat Fresh. Save More.
+          </p>
+          <p class="mx-auto d-none d-md-block d-lg-none fade-in-up fade-delay-1"
+            style="max-width:700px; color:#FFFFFF; font-size:22px;">
+            Support Local. Eat Fresh. Save More.
+          </p>
+          <p class="mx-auto d-block d-md-none fade-in-up fade-delay-1"
+            style="max-width:700px; color:#FFFFFF; font-size:18px;">
+            Support Local. Eat Fresh. Save More.
+          </p>
         </div>
       </div>
     </div>
